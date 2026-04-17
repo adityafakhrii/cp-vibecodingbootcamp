@@ -4,25 +4,21 @@ import { Code2, Wallet, Bot, Lightbulb } from "lucide-react";
 const items = [
   {
     icon: Code2,
-    emoji: "😵‍💫",
     title: "Gak Bisa Coding",
     desc: "Mau belajar dari nol kelamaan, syntax bikin pusing, gak tau mulai dari mana.",
   },
   {
     icon: Wallet,
-    emoji: "💸",
     title: "Hire Developer Mahal",
     desc: "Ngerjain MVP aja bisa tembus puluhan juta. Belum tentu hasilnya sesuai ekspektasi.",
   },
   {
     icon: Bot,
-    emoji: "🤖",
     title: "Bingung Pakai AI",
     desc: "Tools AI banyak banget, tapi gak tau workflow yang bener buat bikin produk jadi.",
   },
   {
     icon: Lightbulb,
-    emoji: "💡",
     title: "Ide Cuma di Kepala",
     desc: "Udah validasi ke temen, semua bilang keren. Tapi sampai sekarang masih nol baris kode.",
   },
@@ -61,14 +57,8 @@ export const Problem = () => {
           {items.map((it, i) => (
             <SectionReveal key={it.title} delay={i * 80}>
               <div className="relative glass rounded-2xl p-6 h-full hover:border-foreground/15 transition-all hover:-translate-y-1">
-                <span
-                  className="absolute top-4 right-4 text-2xl select-none"
-                  aria-hidden="true"
-                >
-                  {it.emoji}
-                </span>
                 <div className="h-11 w-11 rounded-xl bg-gradient-brand/10 border border-foreground/10 flex items-center justify-center mb-4">
-                  <it.icon className="h-5 w-5 text-gradient-brand" style={{ stroke: "url(#g)" }} />
+                  <it.icon className="h-5 w-5 text-foreground" strokeWidth={1.75} />
                 </div>
                 <h3 className="font-semibold text-lg mb-2">{it.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{it.desc}</p>
