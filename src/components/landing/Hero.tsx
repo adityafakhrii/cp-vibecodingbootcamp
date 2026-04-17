@@ -1,3 +1,4 @@
+import { hero } from "@/data/content";
 import { GradientButton } from "./GradientButton";
 import { SectionReveal } from "./SectionReveal";
 import { ArrowRight } from "lucide-react";
@@ -19,36 +20,35 @@ export const Hero = () => {
         <SectionReveal className="max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass text-xs text-muted-foreground mb-10">
             <span className="h-1.5 w-1.5 rounded-full bg-gradient-brand animate-pulse" />
-            Batch baru dibuka
+            {hero.badge}
           </div>
 
           <h1 className="font-extrabold tracking-tight">
             <span className="block text-base sm:text-lg md:text-xl font-medium text-muted-foreground mb-5 sm:mb-6">
-              Punya Ide Aplikasi Tapi Gak Bisa Coding?
+              {hero.subtitle}
             </span>
             <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02] text-gradient-brand">
-              Bangun Sendiri
+              {hero.titleLine1}
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              Pakai AI
+              {hero.titleLine2}
             </span>
           </h1>
 
           <p className="mt-10 md:mt-12 text-base md:text-lg text-muted-foreground/90 max-w-xl mx-auto leading-relaxed">
-            Bootcamp intensif 8 sesi untuk bantu lo ubah ide jadi aplikasi nyata —
-            tanpa harus jadi programmer.
+            {hero.description}
           </p>
 
           <div className="mt-12 md:mt-14 flex flex-col items-center gap-4">
-            <GradientButton asChildHref="#harga" size="lg">
-              Gabung Bootcamp Sekarang
+            <GradientButton asChildHref={hero.ctaHref} size="lg">
+              {hero.ctaText}
               <ArrowRight className="ml-2 h-4 w-4" />
             </GradientButton>
             <a
-              href="#materi"
+              href={hero.secondaryHref}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors story-link"
             >
-              Lihat Materi
+              {hero.secondaryText}
             </a>
           </div>
         </SectionReveal>

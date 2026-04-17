@@ -1,3 +1,4 @@
+import { footerSocials } from "@/data/content";
 import { Sparkles } from "lucide-react";
 
 export const Footer = () => {
@@ -14,9 +15,17 @@ export const Footer = () => {
           © {new Date().getFullYear()} Vibe Coding Bootcamp. Built with AI, of course.
         </p>
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
-          <a href="#" className="hover:text-foreground transition-colors">Instagram</a>
-          <a href="#" className="hover:text-foreground transition-colors">Twitter</a>
-          <a href="#" className="hover:text-foreground transition-colors">YouTube</a>
+          {footerSocials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              {s.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

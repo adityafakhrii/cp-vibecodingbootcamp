@@ -1,46 +1,22 @@
+import { projectsSection } from "@/data/content";
 import { SectionReveal } from "./SectionReveal";
-import { Globe, Store, Sparkles } from "lucide-react";
-
-const levels = [
-  {
-    level: "Level 1",
-    icon: Globe,
-    title: "Portfolio Website",
-    desc: "Bangun website portfolio personal yang clean & modern. Foundation buat ngerti gimana web bekerja.",
-    tags: ["HTML/CSS dasar", "Deploy ke domain", "Responsive"],
-  },
-  {
-    level: "Level 2",
-    icon: Store,
-    title: "Aplikasi Produk (POS)",
-    desc: "Bikin Point-of-Sale system lengkap dengan database, login, dan dashboard penjualan.",
-    tags: ["Database", "Auth", "CRUD"],
-  },
-  {
-    level: "Level 3",
-    icon: Sparkles,
-    title: "AI-Powered Apps",
-    desc: "Build produk AI nyata: Falaah (Ibadah Tracker) & SahurYuk (AI food recommendation).",
-    tags: ["LLM Integration", "Recommendation", "Real product"],
-  },
-];
 
 export const Projects = () => {
   return (
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-14">
-          <p className="text-sm font-medium text-gradient-brand mb-3">PROJECT OUTPUT</p>
+          <p className="text-sm font-medium text-gradient-brand mb-3">{projectsSection.label}</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Lulus dengan 3 aplikasi nyata.
+            {projectsSection.title}
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Bukan tutorial hell — tiap level lo deploy produk yang bisa lo pamerin.
+            {projectsSection.subtitle}
           </p>
         </SectionReveal>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {levels.map((lv, i) => (
+          {projectsSection.levels.map((lv, i) => (
             <SectionReveal key={lv.level} delay={i * 100}>
               <div className="glass rounded-3xl p-7 h-full hover:-translate-y-1 transition-all relative overflow-hidden group">
                 <div className="absolute -top-20 -right-20 h-48 w-48 bg-gradient-brand opacity-0 group-hover:opacity-20 blur-3xl transition-opacity" />

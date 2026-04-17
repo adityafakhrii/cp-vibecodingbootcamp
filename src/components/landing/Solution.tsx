@@ -1,12 +1,6 @@
+import { solutionSection } from "@/data/content";
 import { SectionReveal } from "./SectionReveal";
 import { Check, ArrowRight } from "lucide-react";
-
-const points = [
-  "Workflow nyata dari ide → prototype → aplikasi live",
-  "Belajar pakai AI tools yang dipakai builder beneran",
-  "Bukan teori — tiap sesi lo build sesuatu yang bisa dipake",
-  "Mentoring langsung kalau lo stuck di project lo",
-];
 
 export const Solution = () => {
   return (
@@ -14,16 +8,16 @@ export const Solution = () => {
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <SectionReveal>
-            <p className="text-sm font-medium text-gradient-brand mb-3">SOLUSINYA</p>
+            <p className="text-sm font-medium text-gradient-brand mb-3">{solutionSection.label}</p>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
-              Bootcamp yang ngajarin lo{" "}
-              <span className="text-gradient-brand">build aplikasi</span>, bukan cuma teori.
+              {solutionSection.title}{" "}
+              <span className="text-gradient-brand">{solutionSection.titleHighlight}</span>{solutionSection.titleSuffix}
             </h2>
             <p className="mt-5 text-muted-foreground text-lg leading-relaxed">
-              Lo bakal punya skill praktikal buat ngubah ide jadi produk yang bisa dipake user — pakai stack AI modern yang lagi dipake startup di luar sana.
+              {solutionSection.description}
             </p>
             <ul className="mt-7 space-y-3">
-              {points.map((p) => (
+              {solutionSection.points.map((p) => (
                 <li key={p} className="flex items-start gap-3 text-sm md:text-base">
                   <span className="mt-0.5 h-5 w-5 rounded-full bg-gradient-brand flex items-center justify-center shrink-0">
                     <Check className="h-3 w-3 text-white" strokeWidth={3} />
@@ -45,12 +39,7 @@ export const Solution = () => {
                   <span className="ml-3 text-xs text-muted-foreground">vibe-coding.app</span>
                 </div>
 
-                {[
-                  { tag: "01 · IDE", text: "Aplikasi tracking ibadah harian" },
-                  { tag: "02 · AI", text: "Generate UI + database schema" },
-                  { tag: "03 · BUILD", text: "Iterate fitur sambil ngobrol sama AI" },
-                  { tag: "04 · SHIP", text: "Deploy & share link ke user" },
-                ].map((step, i) => (
+                {solutionSection.steps.map((step) => (
                   <div
                     key={step.tag}
                     className="flex items-center gap-4 p-4 rounded-xl hairline mb-3 last:mb-0 bg-background/40"

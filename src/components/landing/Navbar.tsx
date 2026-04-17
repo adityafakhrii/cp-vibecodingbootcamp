@@ -1,16 +1,9 @@
 import { useEffect, useState } from "react";
+import { navLinks, navCTA } from "@/data/content";
 import { GradientButton } from "./GradientButton";
 import { ThemeToggle } from "./ThemeToggle";
 import { Sparkles, Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const links = [
-  { href: "#materi", label: "Materi" },
-  { href: "#roadmap", label: "Roadmap" },
-  { href: "#mentor", label: "Mentor" },
-  { href: "#harga", label: "Harga" },
-  { href: "#faq", label: "FAQ" },
-];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -66,7 +59,7 @@ export const Navbar = () => {
           </a>
 
           <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-            {links.map((l) => (
+            {navLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
@@ -79,8 +72,8 @@ export const Navbar = () => {
 
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <GradientButton asChildHref="#harga" className="hidden sm:inline-flex">
-              Gabung Sekarang
+            <GradientButton asChildHref={navCTA.href} className="hidden sm:inline-flex">
+              {navCTA.text}
             </GradientButton>
             <button
               type="button"
@@ -125,7 +118,7 @@ export const Navbar = () => {
           )}
         >
           <ul className="flex flex-col">
-            {links.map((l, i) => (
+            {navLinks.map((l, i) => (
               <li key={l.href}>
                 <a
                   href={l.href}
@@ -142,11 +135,11 @@ export const Navbar = () => {
 
           <div className="mt-5">
             <GradientButton
-              asChildHref="#harga"
+              asChildHref={navCTA.href}
               className="w-full justify-center"
               onClick={() => setOpen(false)}
             >
-              Gabung Sekarang
+              {navCTA.text}
             </GradientButton>
           </div>
         </div>

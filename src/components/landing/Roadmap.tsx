@@ -1,3 +1,4 @@
+import { roadmapSection } from "@/data/content";
 import {
   Accordion,
   AccordionContent,
@@ -5,85 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { SectionReveal } from "./SectionReveal";
-import {
-  Lightbulb,
-  Sparkles,
-  Monitor,
-  AppWindow,
-  Bot,
-  Sliders,
-  Rocket,
-  Trophy,
-  Award,
-  type LucideIcon,
-} from "lucide-react";
-
-interface Session {
-  n: number;
-  icon: LucideIcon;
-  title: string;
-  desc: string;
-  output: string;
-}
-
-const sessions: Session[] = [
-  {
-    n: 1,
-    icon: Lightbulb,
-    title: "Mindset & Idea Validation",
-    desc: "Ubah cara lo melihat coding dan breakdown ide jadi struktur aplikasi.",
-    output: "Ide project + struktur jelas",
-  },
-  {
-    n: 2,
-    icon: Sparkles,
-    title: "Prompting Skill",
-    desc: "Belajar cara 'ngomong' ke AI biar bisa generate aplikasi sesuai keinginan.",
-    output: "Prompt siap pakai",
-  },
-  {
-    n: 3,
-    icon: Monitor,
-    title: "Build Landing Page",
-    desc: "Bikin landing page profesional untuk produk lo.",
-    output: "Landing page live",
-  },
-  {
-    n: 4,
-    icon: AppWindow,
-    title: "Build Web App",
-    desc: "Mulai bangun aplikasi utama dari nol pakai AI.",
-    output: "Web app basic",
-  },
-  {
-    n: 5,
-    icon: Bot,
-    title: "AI Integration",
-    desc: "Tambahin fitur AI biar aplikasi lo lebih pintar.",
-    output: "AI-powered feature",
-  },
-  {
-    n: 6,
-    icon: Sliders,
-    title: "Improvement & Feature Expansion",
-    desc: "Upgrade aplikasi jadi lebih usable dan real.",
-    output: "App lebih kompleks",
-  },
-  {
-    n: 7,
-    icon: Rocket,
-    title: "Deploy & Publish",
-    desc: "Launch aplikasi lo ke internet.",
-    output: "App live + domain",
-  },
-  {
-    n: 8,
-    icon: Trophy,
-    title: "Monetization & Showcase",
-    desc: "Belajar cara jual / manfaatin aplikasi lo.",
-    output: "Project siap dipakai / dijual",
-  },
-];
+import { Award } from "lucide-react";
 
 export const Roadmap = () => {
   return (
@@ -91,14 +14,14 @@ export const Roadmap = () => {
       <div className="container mx-auto max-w-4xl px-6">
         <div className="text-center mb-14">
           <span className="inline-block text-xs font-medium tracking-widest uppercase text-muted-foreground mb-4">
-            Roadmap Bootcamp
+            {roadmapSection.label}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-            Lo Gak Akan Bingung Mulai dari Mana —{" "}
-            <span className="text-gradient-brand">Kita Udah Susun Step-by-Step</span>
+            {roadmapSection.title}{" "}
+            <span className="text-gradient-brand">{roadmapSection.titleHighlight}</span>
           </h2>
           <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Dalam 8 sesi, lo akan dibimbing dari nol sampai punya aplikasi berbasis AI yang bisa dipakai atau dijual.
+            {roadmapSection.subtitle}
           </p>
         </div>
 
@@ -108,7 +31,7 @@ export const Roadmap = () => {
           defaultValue="session-1"
           className="glass rounded-2xl px-2 sm:px-6 divide-y divide-border/60"
         >
-          {sessions.map((s) => {
+          {roadmapSection.sessions.map((s) => {
             const Icon = s.icon;
             return (
               <AccordionItem
@@ -160,10 +83,10 @@ export const Roadmap = () => {
                 </span>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
-                Best Project Award
+                {roadmapSection.bonusTitle}
               </h3>
               <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                Peserta dengan project terbaik akan mendapatkan reward dan kesempatan dipromosikan.
+                {roadmapSection.bonusDesc}
               </p>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { finalCTA } from "@/data/content";
 import { SectionReveal } from "./SectionReveal";
 import { GradientButton } from "./GradientButton";
 import { ArrowRight } from "lucide-react";
@@ -13,16 +14,16 @@ export const FinalCTA = () => {
 
             <div className="relative">
               <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-3xl mx-auto">
-                Kalau di 2026 lo masih bangun manual,
+                {finalCTA.title}
                 <br />
-                <span className="text-gradient-brand">lo udah ketinggalan.</span>
+                <span className="text-gradient-brand">{finalCTA.titleHighlight}</span>
               </h2>
               <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-                Era baru udah dimulai. Pertanyaannya: lo mau jadi pemain atau penonton?
+                {finalCTA.subtitle}
               </p>
               <div className="mt-9">
-                <GradientButton asChildHref="#harga" size="lg">
-                  Gabung Sekarang
+                <GradientButton asChildHref={finalCTA.ctaHref} size="lg">
+                  {finalCTA.ctaText}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </GradientButton>
               </div>

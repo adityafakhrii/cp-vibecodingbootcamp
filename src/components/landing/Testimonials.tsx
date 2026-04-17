@@ -1,40 +1,20 @@
+import { testimonialsSection } from "@/data/content";
 import { SectionReveal } from "./SectionReveal";
 import { Star } from "lucide-react";
-
-const items = [
-  {
-    quote:
-      "Dulu gue bayar developer 15 juta cuma buat MVP. Sekarang gue bisa bikin sendiri dalam 3 hari pakai workflow yang diajarin di sini.",
-    name: "Rara Wijaya",
-    role: "Founder, Skincare Brand",
-  },
-  {
-    quote:
-      "Gue background marketing, gak ngerti coding sama sekali. Selesai bootcamp, gue udah deploy dashboard internal buat tim sendiri.",
-    name: "Bagas Pratama",
-    role: "Marketing Lead",
-  },
-  {
-    quote:
-      "Materinya straight to the point. Gak ada teori bertele-tele — langsung praktek dan hasilnya kelihatan tiap sesi.",
-    name: "Nadia Salsabila",
-    role: "Product Designer",
-  },
-];
 
 export const Testimonials = () => {
   return (
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-14">
-          <p className="text-sm font-medium text-gradient-brand mb-3">TESTIMONI</p>
+          <p className="text-sm font-medium text-gradient-brand mb-3">{testimonialsSection.label}</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Hasil nyata dari alumni.
+            {testimonialsSection.title}
           </h2>
         </SectionReveal>
 
         <div className="grid md:grid-cols-3 gap-5">
-          {items.map((t, i) => (
+          {testimonialsSection.items.map((t, i) => (
             <SectionReveal key={t.name} delay={i * 100}>
               <div className="glass rounded-2xl p-6 h-full">
                 <div className="flex gap-0.5 mb-4">
