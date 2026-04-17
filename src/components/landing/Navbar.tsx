@@ -42,7 +42,7 @@ export const Navbar = () => {
         <nav
           className={cn(
             "flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all",
-            scrolled || open ? "glass-strong" : "glass"
+            scrolled || open ? "bg-surface border border-border shadow-sm" : ""
           )}
         >
           <a
@@ -50,11 +50,11 @@ export const Navbar = () => {
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 font-bold tracking-tight"
           >
-            <span className="h-8 w-8 rounded-lg bg-gradient-brand flex items-center justify-center shadow-glow">
-              <Sparkles className="h-4 w-4 text-white" />
+            <span className="h-8 w-8 rounded-lg bg-brand-blue flex items-center justify-center text-primary-foreground">
+              <Sparkles className="h-4 w-4" />
             </span>
             <span className="text-base md:text-lg">
-              Vibe<span className="text-gradient-brand">Coding</span>
+              Vibe<span className="text-brand-blue">Coding</span>
             </span>
           </a>
 
@@ -81,7 +81,7 @@ export const Navbar = () => {
               aria-label={open ? "Tutup menu" : "Buka menu"}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-border/60 bg-background/40 text-foreground hover:bg-background/70 transition-colors"
+              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-border bg-surface text-foreground hover:bg-secondary transition-colors"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -113,7 +113,7 @@ export const Navbar = () => {
         <div
           id="mobile-menu"
           className={cn(
-            "relative mx-4 mt-[88px] rounded-2xl glass-strong p-5 shadow-glow transition-all duration-300 origin-top",
+            "relative mx-4 mt-[88px] rounded-2xl bg-surface p-5 border border-border shadow-md transition-all duration-300 origin-top",
             open ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-2 scale-[0.98]"
           )}
         >

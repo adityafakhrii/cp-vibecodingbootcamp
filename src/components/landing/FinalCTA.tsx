@@ -8,24 +8,33 @@ export const FinalCTA = () => {
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionReveal>
-          <div className="relative overflow-hidden rounded-3xl p-10 md:p-16 text-center glass-strong">
-            <div className="absolute inset-0 bg-gradient-brand opacity-20 pointer-events-none" />
-            <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-72 w-[60%] bg-gradient-brand blur-3xl opacity-40 pointer-events-none" />
+          <div className="relative overflow-hidden rounded-3xl p-10 md:p-12 lg:p-16 bg-surface border border-border shadow-md">
+            <div className="grid lg:grid-cols-2 gap-10 items-center justify-between text-center lg:text-left">
+              <div className="order-2 lg:order-1 relative">
+                <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-xl mx-auto lg:mx-0">
+                  {finalCTA.title}
+                  <br />
+                  <span className="text-brand-blue">{finalCTA.titleHighlight}</span>
+                </h2>
+                <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+                  {finalCTA.subtitle}
+                </p>
+                <div className="mt-9 flex justify-center lg:justify-start">
+                  <GradientButton asChildHref={finalCTA.ctaHref} size="lg">
+                    {finalCTA.ctaText}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </GradientButton>
+                </div>
+              </div>
 
-            <div className="relative">
-              <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight leading-[1.05] max-w-3xl mx-auto">
-                {finalCTA.title}
-                <br />
-                <span className="text-gradient-brand">{finalCTA.titleHighlight}</span>
-              </h2>
-              <p className="mt-6 text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-                {finalCTA.subtitle}
-              </p>
-              <div className="mt-9">
-                <GradientButton asChildHref={finalCTA.ctaHref} size="lg">
-                  {finalCTA.ctaText}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </GradientButton>
+              <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+                <div className="relative rounded-full overflow-hidden shadow-lg border-4 border-white lg:-mr-4 aspect-square max-w-[280px] lg:max-w-md w-full">
+                  <img
+                    src="/images/illustrations/cta_invite.png"
+                    alt="Professional giving a welcoming invitation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

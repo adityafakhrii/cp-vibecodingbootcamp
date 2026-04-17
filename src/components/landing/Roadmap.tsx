@@ -13,12 +13,12 @@ export const Roadmap = () => {
     <SectionReveal as="section" id="roadmap" className="py-24 sm:py-32">
       <div className="container mx-auto max-w-4xl px-6">
         <div className="text-center mb-14">
-          <span className="inline-block text-xs font-medium tracking-widest uppercase text-muted-foreground mb-4">
+          <span className="inline-block text-xs font-bold tracking-widest uppercase text-brand-blue mb-4">
             {roadmapSection.label}
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
             {roadmapSection.title}{" "}
-            <span className="text-gradient-brand">{roadmapSection.titleHighlight}</span>
+            <span className="text-brand-blue">{roadmapSection.titleHighlight}</span>
           </h2>
           <p className="mt-5 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             {roadmapSection.subtitle}
@@ -29,7 +29,7 @@ export const Roadmap = () => {
           type="single"
           collapsible
           defaultValue="session-1"
-          className="glass rounded-2xl px-2 sm:px-6 divide-y divide-border/60"
+          className="bg-surface border border-border shadow-sm rounded-2xl px-2 sm:px-6 divide-y divide-border/60"
         >
           {roadmapSection.sessions.map((s) => {
             const Icon = s.icon;
@@ -41,7 +41,7 @@ export const Roadmap = () => {
               >
                 <AccordionTrigger className="hover:no-underline py-5 group">
                   <div className="flex items-center gap-4 text-left">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-brand/10 border border-border/60 text-foreground group-hover:border-brand-blue/40 transition-colors">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-blue/10 border border-border text-brand-blue group-hover:border-brand-blue/40 transition-colors">
                       <Icon className="h-5 w-5" strokeWidth={1.75} />
                     </div>
                     <div className="flex flex-col">
@@ -58,8 +58,8 @@ export const Roadmap = () => {
                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {s.desc}
                   </p>
-                  <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background/40 px-3 py-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-gradient-brand" />
+                  <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-brand-blue" />
                     <span className="text-xs font-medium text-foreground">
                       Output: <span className="text-muted-foreground">{s.output}</span>
                     </span>
@@ -71,14 +71,14 @@ export const Roadmap = () => {
         </Accordion>
 
         {/* Bonus block */}
-        <div className="relative mt-10 rounded-2xl p-[1px] bg-gradient-brand">
-          <div className="rounded-2xl bg-background/90 backdrop-blur-md p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-brand text-white shadow-lg shadow-brand-purple/20">
+        <div className="relative mt-10 rounded-2xl border border-border bg-background shadow-md">
+          <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-brand-blue text-primary-foreground shadow-sm">
               <Award className="h-7 w-7" strokeWidth={1.75} />
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1.5">
-                <span className="text-[10px] font-semibold tracking-widest uppercase text-gradient-brand">
+                <span className="text-[10px] font-bold tracking-widest uppercase text-brand-blue">
                   Bonus
                 </span>
               </div>

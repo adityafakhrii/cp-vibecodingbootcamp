@@ -3,11 +3,11 @@ import { SectionReveal } from "./SectionReveal";
 
 export const Features = () => {
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-surface border-y border-border">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-14">
-          <p className="text-sm font-medium text-gradient-brand mb-3">{featuresSection.label}</p>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <p className="text-sm font-semibold text-brand-blue uppercase tracking-wider mb-3">{featuresSection.label}</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
             {featuresSection.title}
           </h2>
         </SectionReveal>
@@ -15,9 +15,9 @@ export const Features = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuresSection.features.map((f, i) => (
             <SectionReveal key={f.title} delay={i * 60} className={i === 0 ? "lg:col-span-2" : ""}>
-              <div className="glass rounded-2xl p-6 h-full flex gap-4 hover:border-foreground/15 transition-all">
-                <div className="h-11 w-11 rounded-xl bg-gradient-brand flex items-center justify-center shrink-0 shadow-glow">
-                  <f.icon className="h-5 w-5 text-white" />
+              <div className="bg-background border border-border rounded-2xl p-6 h-full flex gap-4 hover:shadow-md transition-all">
+                <div className="h-11 w-11 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
+                  <f.icon className="h-5 w-5 text-brand-blue" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-base mb-1">{f.title}</h3>

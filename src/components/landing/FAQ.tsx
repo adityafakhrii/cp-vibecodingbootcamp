@@ -9,11 +9,11 @@ import {
 
 export const FAQ = () => {
   return (
-    <section id="faq" className="py-20 md:py-28">
+    <section id="faq" className="py-20 md:py-28 bg-background">
       <div className="container max-w-3xl">
         <SectionReveal className="text-center mb-12">
-          <p className="text-sm font-medium text-gradient-brand mb-3">{faqSection.label}</p>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue mb-3">{faqSection.label}</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
             {faqSection.title}
           </h2>
         </SectionReveal>
@@ -24,7 +24,7 @@ export const FAQ = () => {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="glass rounded-2xl border-0 px-5 overflow-hidden"
+                className="bg-surface border border-border rounded-2xl px-5 overflow-hidden shadow-sm"
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
                   {f.q}

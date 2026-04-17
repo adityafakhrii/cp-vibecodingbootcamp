@@ -11,11 +11,11 @@ export const Testimonials = () => {
   );
 
   return (
-    <section className="py-20 md:py-28 overflow-hidden">
+    <section className="py-20 md:py-28 bg-background overflow-hidden relative">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-14">
-          <p className="text-sm font-medium text-gradient-brand mb-3">{testimonialsSection.label}</p>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+          <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue mb-3">{testimonialsSection.label}</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
             {testimonialsSection.title}
           </h2>
         </SectionReveal>
@@ -28,15 +28,15 @@ export const Testimonials = () => {
                   key={i}
                   className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-5"
                 >
-                  <div className="glass rounded-2xl p-6 h-full flex flex-col">
+                  <div className="bg-surface border border-border shadow-sm rounded-2xl p-6 h-full flex flex-col">
                     <div className="flex gap-0.5 mb-4">
                       {Array.from({ length: 5 }).map((_, k) => (
                         <Star key={k} className="h-4 w-4 fill-brand-blue text-brand-blue" />
                       ))}
                     </div>
                     <p className="text-sm md:text-base leading-relaxed mb-6 flex-grow">"{t.quote}"</p>
-                    <div className="flex items-center gap-3 pt-4 border-t border-foreground/10">
-                      <div className="h-10 w-10 shrink-0 rounded-full bg-gradient-brand flex items-center justify-center text-white text-sm font-bold">
+                    <div className="flex items-center gap-3 pt-4 border-t border-border">
+                      <div className="h-10 w-10 shrink-0 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue text-sm font-bold">
                         {t.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                       </div>
                       <div>
