@@ -280,6 +280,30 @@ export const testimonialsSection = {
             name: "Nadia Salsabila",
             role: "Product Designer",
         },
+        {
+            quote:
+                "Awalnya skeptis karena nggak punya basic IT, tapi cara ngajarnya asik banget. Sekarang lagi build MVP aplikasi kasir buat toko nyokap!",
+            name: "Budi Santoso",
+            role: "Mahasiswa",
+        },
+        {
+            quote:
+                "Gak kerasa 8 sesi udah bisa bikin AI app sendiri. Prompting skill gue naik drastis. Recommended banget buat temen-temen non-tech.",
+            name: "Amanda Larasati",
+            role: "Content Creator",
+        },
+        {
+            quote:
+                "Investasi ilmu yang worth it parah. Daripada ngabisin waktu nonton tutorial berjam-jam tapi ngga ada hasil, di sini dipaksa praktek.",
+            name: "Kevin Aditya",
+            role: "Freelancer",
+        },
+        {
+            quote:
+                "Gila sih, tools AI jaman sekarang emang game changer. Mentornya sabar banget ngajarin dari nol sampe kita beneran ngerti alurnya.",
+            name: "Siti Aisyah",
+            role: "UMKM Owner",
+        },
     ] as Testimonial[],
 };
 
