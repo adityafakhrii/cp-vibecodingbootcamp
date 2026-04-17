@@ -39,9 +39,9 @@ export const Solution = () => {
               <div className="absolute -inset-6 bg-gradient-brand/20 blur-3xl rounded-full pointer-events-none" />
               <div className="relative glass-strong rounded-3xl p-6 md:p-8 shadow-glow">
                 <div className="flex items-center gap-2 mb-5">
-                  <span className="h-3 w-3 rounded-full bg-red-400/70" />
-                  <span className="h-3 w-3 rounded-full bg-yellow-400/70" />
-                  <span className="h-3 w-3 rounded-full bg-green-400/70" />
+                  <span className="h-3 w-3 rounded-full bg-destructive/70" />
+                  <span className="h-3 w-3 rounded-full bg-brand-blue/70" />
+                  <span className="h-3 w-3 rounded-full bg-brand-purple/70" />
                   <span className="ml-3 text-xs text-muted-foreground">vibe-coding.app</span>
                 </div>
 
