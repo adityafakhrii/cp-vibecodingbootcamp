@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { Problem } from "@/components/landing/Problem";
 import { Solution } from "@/components/landing/Solution";
 import { Projects } from "@/components/landing/Projects";
+import { Roadmap } from "@/components/landing/Roadmap";
 import { Features } from "@/components/landing/Features";
 import { Mentor } from "@/components/landing/Mentor";
 import { Tools } from "@/components/landing/Tools";
@@ -20,6 +21,7 @@ const Index = () => {
       <Problem />
       <Solution />
       <Projects />
+      <Roadmap />
       <Features />
       <Mentor />
       <Tools />
