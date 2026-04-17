@@ -8,7 +8,7 @@ interface GradientButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>(
-  ({ variant = "primary", size = "md", className, children, asChildHref, ...props }, ref) => {
+  ({ variant = "primary", size = "md", className, children, asChildHref, onClick, ...props }, ref) => {
     const base =
       "inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue/60";
     const sizes = size === "lg" ? "px-7 py-4 text-base" : "px-5 py-3 text-sm";
@@ -21,6 +21,7 @@ export const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>
       return (
         <a
           href={asChildHref}
+          onClick={onClick as unknown as React.MouseEventHandler<HTMLAnchorElement>}
           className={cn(base, sizes, styles, className)}
         >
           {children}
