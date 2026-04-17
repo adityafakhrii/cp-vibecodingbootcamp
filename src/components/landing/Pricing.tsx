@@ -1,5 +1,6 @@
 import { SectionReveal } from "./SectionReveal";
 import { GradientButton } from "./GradientButton";
+import { CountdownTimer } from "./CountdownTimer";
 import { Check, Flame } from "lucide-react";
 
 const includes = [
@@ -21,6 +22,10 @@ export const Pricing = () => {
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
             Investasi sekali, skill seumur hidup.
           </h2>
+        </SectionReveal>
+
+        <SectionReveal>
+          <CountdownTimer />
         </SectionReveal>
 
         <SectionReveal className="max-w-2xl mx-auto">
