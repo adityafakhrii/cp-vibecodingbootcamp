@@ -7,8 +7,11 @@ export const FinalCTA = () => {
   return (
     <section className="py-20 md:py-28">
       <div className="container">
-        <SectionReveal>
-          <div className="relative overflow-hidden p-10 md:p-12 lg:p-16 glass-panel">
+        <SectionReveal className="relative">
+          {/* Glass highlight background blob */}
+          <div className="absolute -inset-4 md:-inset-8 bg-gradient-to-tr from-brand-blue/40 via-brand-purple/20 to-brand-light/30 blur-[70px] opacity-70 z-0 pointer-events-none rounded-[4rem] dark:from-brand-blue/20 dark:to-transparent" />
+
+          <div className="relative overflow-hidden p-10 md:p-12 lg:p-16 glass-panel z-10 border border-white/80 dark:border-white/20">
             <div className="grid lg:grid-cols-2 gap-10 items-center justify-between text-center lg:text-left">
               <div className="order-2 lg:order-1 relative">
                 <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight leading-[1.1] max-w-xl mx-auto lg:mx-0">

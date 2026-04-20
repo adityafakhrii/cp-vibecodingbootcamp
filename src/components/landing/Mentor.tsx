@@ -12,8 +12,11 @@ export const Mentor = () => {
           </h2>
         </SectionReveal>
 
-        <SectionReveal className="max-w-4xl mx-auto">
-          <div className="glass-panel p-7 md:p-10 grid md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-center">
+        <SectionReveal className="max-w-4xl mx-auto relative">
+          {/* Glass highlight background blob */}
+          <div className="absolute -inset-4 md:-inset-10 bg-gradient-to-r from-brand-blue/30 to-brand-purple/20 blur-[60px] opacity-60 z-0 pointer-events-none rounded-[3rem] dark:opacity-40" />
+
+          <div className="glass-panel p-7 md:p-10 grid md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-center relative z-10 border border-white/80 dark:border-white/20">
             <div className="relative mx-auto md:mx-0">
               <div className="relative h-20 w-20 sm:h-28 sm:w-28 md:h-40 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-border">
                 <img
@@ -27,7 +30,7 @@ export const Mentor = () => {
             <div>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight">{mentorSection.name}</h3>
               <p className="text-brand-blue font-semibold mt-1">{mentorSection.role}</p>
-              <p className="mt-4 text-muted-foreground leading-relaxed">
+              <p className="mt-4 text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
                 {mentorSection.bio}
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
