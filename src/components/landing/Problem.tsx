@@ -19,7 +19,7 @@ export const Problem = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {problemSection.items.map((it, i) => (
             <SectionReveal key={it.title} delay={i * 80}>
-              <div className="bg-surface border border-brand-light shadow-md rounded-2xl p-7 h-full card-hover">
+              <div className="glass-card p-7 h-full card-hover">
                 <div className="h-12 w-12 rounded-xl bg-brand-light/50 flex items-center justify-center mb-5 ring-4 ring-white">
                   <it.icon className="h-6 w-6 text-brand-dark" strokeWidth={2} />
                 </div>

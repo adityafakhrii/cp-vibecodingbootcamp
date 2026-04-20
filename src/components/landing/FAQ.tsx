@@ -24,7 +24,7 @@ export const FAQ = () => {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="bg-surface border border-border rounded-2xl px-5 overflow-hidden shadow-sm"
+                className="glass-card px-5 overflow-hidden"
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
                   {f.q}

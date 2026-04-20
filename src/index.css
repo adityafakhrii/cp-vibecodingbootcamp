@@ -79,10 +79,11 @@
     /* Text */
     --foreground: 210 40% 96%;
     /* #F1F5F9 */
-    --secondary-foreground: 225 61% 88%;
+    --secondary-foreground: 210 40% 96%;
+    /* Updated to #F1F5F9 for high contrast */
     /* #CBD5F5 */
-    --muted-foreground: 215 20% 65%;
-    /* #94A3B8 */
+    --muted-foreground: 215 20% 75%;
+    /* slightly brighter for readability */
 
     /* Brand Layers */
     --brand-light: 217 91% 60%;
@@ -146,7 +147,30 @@
 
 @layer utilities {
   .card-hover {
-    @apply hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300;
+    @apply hover:-translate-y-[2px] hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20 transition-all duration-300;
+  }
+
+  /* Glassmorphism Utilities */
+  .glass-nav {
+    @apply bg-white/60 dark:bg-slate-900/60 backdrop-blur-[16px] border border-white/40 dark:border-white/10 shadow-md dark:shadow-none rounded-full;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-gray-800/60 backdrop-blur-[16px] border border-white/40 dark:border-white/10 rounded-[20px] shadow-sm;
+  }
+
+  .glass-panel {
+    @apply bg-white/50 dark:bg-gray-900/50 backdrop-blur-[16px] border border-white/30 dark:border-white/10 shadow-inner rounded-3xl relative overflow-hidden;
+  }
+
+  .glass-panel::after {
+    content: '';
+    @apply absolute inset-0 rounded-3xl pointer-events-none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .dark .glass-panel::after {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   .text-gradient-brand {
@@ -169,5 +193,15 @@
   .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Noise Texture Utility */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opactiy='0.05'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
   }
 }

@@ -7,10 +7,11 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative pt-40 md:pt-30 pb-28 md:pb-30 bg-background overflow-hidden"
+      className="relative pt-40 md:pt-30 pb-28 md:pb-30 bg-gradient-to-b from-blue-50/50 to-surface dark:from-slate-900 dark:to-background overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 h-full w-full bg-background bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem]">
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-brand-blue opacity-20 blur-[100px]"></div>
+      <div className="bg-noise"></div>
+      <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[400px] w-[600px] rounded-[100%] bg-blue-400/10 dark:bg-brand-blue/10 blur-[100px]"></div>
       </div>
       <div className="container relative z-10">
         <SectionReveal className="max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -20,16 +21,16 @@ export const Hero = () => {
           </div>
 
           <h1 className="font-extrabold tracking-tight relative z-10">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[140%] max-w-2xl bg-brand-light/60 blur-3xl rounded-[100%] pointer-events-none -z-10 dark:bg-brand-deep/30" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[140%] max-w-2xl bg-blue-100/30 blur-[120px] rounded-[100%] pointer-events-none -z-10 dark:bg-brand-blue/10" />
 
             <span className="block text-base sm:text-lg md:text-xl font-semibold text-brand-deep dark:text-brand-blue mb-5 sm:mb-6 uppercase tracking-widest drop-shadow-sm">
               {hero.subtitle}
             </span>
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] text-foreground pb-2">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.05] text-foreground pb-2">
               {hero.titleLine1}
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
-              {hero.titleLine2}{" "}
+              {/* {hero.titleLine2}{" "} */}
               <span className="relative inline-block whitespace-nowrap">
                 <span className="relative z-10 text-brand-blue">{hero.titleHighlight}</span>
                 <svg

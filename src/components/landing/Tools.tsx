@@ -20,7 +20,7 @@ export const Tools = () => {
             {toolsSection.tools.map((t) => (
               <div
                 key={t}
-                className="bg-surface border border-border shadow-sm rounded-2xl py-6 px-4 text-center font-semibold hover:shadow-md hover:-translate-y-0.5 transition-all text-foreground"
+                className="glass-card py-6 px-4 text-center font-semibold card-hover text-foreground"
               >
                 {t}
               </div>

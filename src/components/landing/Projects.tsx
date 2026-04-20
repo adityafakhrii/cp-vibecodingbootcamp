@@ -19,7 +19,7 @@ export const Projects = () => {
         <div className="grid md:grid-cols-3 gap-5">
           {projectsSection.levels.map((lv, i) => (
             <SectionReveal key={lv.level} delay={i * 100}>
-              <div className="bg-surface border-2 border-brand-light/60 shadow-md rounded-3xl p-7 h-full card-hover relative overflow-hidden group">
+              <div className="glass-card !rounded-3xl p-7 h-full card-hover relative overflow-hidden group">
                 <div className="relative z-10">
                   <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-deep text-white text-xs font-bold tracking-wide mb-5">
                     {lv.level}

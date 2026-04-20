@@ -24,7 +24,7 @@ export const Pricing = () => {
           {/* Subtle Outer Glow Edge */}
           <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-primary rounded-[2rem] blur-[20px] opacity-20 pointer-events-none" />
 
-          <div className="relative bg-surface border border-border rounded-[2.5rem] p-8 md:p-12 shadow-xl hover:shadow-2xl transition-shadow duration-500 overflow-hidden">
+          <div className="relative glass-card !rounded-[2.5rem] p-8 md:p-12 transition-all duration-500 overflow-hidden card-hover">
             <div className="absolute top-0 right-0 bg-brand-blue text-white text-[10px] sm:text-xs font-bold px-4 py-2 rounded-bl-2xl uppercase tracking-widest">
               Paling Laris
             </div>

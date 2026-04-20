@@ -18,7 +18,7 @@ export const Schedule = () => {
                 <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20 lg:mb-24">
                     {scheduleSection.mainInfo.map((info, i) => (
                         <SectionReveal key={info.label} delay={i * 80} className="h-full">
-                            <div className="bg-background border border-border shadow-sm rounded-2xl p-5 text-center h-full hover:shadow-md transition-all hover:-translate-y-1">
+                            <div className="glass-card p-5 text-center h-full card-hover">
                                 <div className="h-10 w-10 mx-auto rounded-full bg-brand-blue/10 flex items-center justify-center mb-3">
                                     <info.icon className="h-4 w-4 text-brand-blue" />
                                 </div>
@@ -30,7 +30,7 @@ export const Schedule = () => {
                 </div>
 
                 <SectionReveal delay={150}>
-                    <div className="max-w-4xl mx-auto bg-background border border-border rounded-3xl p-8 md:p-12 shadow-sm relative overflow-hidden">
+                    <div className="max-w-4xl mx-auto p-8 md:p-12 relative glass-panel">
                         <h3 className="font-bold text-xl mb-10 text-center tracking-tight">Timeline Sesi</h3>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 relative">
                             {/* Subtle dashed line connecting steps on md+ */}

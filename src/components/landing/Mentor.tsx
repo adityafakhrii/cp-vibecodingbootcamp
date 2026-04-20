@@ -13,7 +13,7 @@ export const Mentor = () => {
         </SectionReveal>
 
         <SectionReveal className="max-w-4xl mx-auto">
-          <div className="bg-background border border-border shadow-md rounded-3xl p-7 md:p-10 grid md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-center">
+          <div className="glass-panel p-7 md:p-10 grid md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-center">
             <div className="relative mx-auto md:mx-0">
               <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-sm border border-border">
                 <img

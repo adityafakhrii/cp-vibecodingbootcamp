@@ -15,7 +15,7 @@ export const Features = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {featuresSection.features.map((f, i) => (
             <SectionReveal key={f.title} delay={i * 60} className={i === 0 ? "lg:col-span-2" : ""}>
-              <div className="bg-background border border-border rounded-2xl p-6 h-full flex gap-4 hover:shadow-md transition-all">
+              <div className="glass-card p-6 h-full flex gap-4 card-hover overflow-hidden relative">
                 <div className="h-11 w-11 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
                   <f.icon className="h-5 w-5 text-brand-blue" />
                 </div>

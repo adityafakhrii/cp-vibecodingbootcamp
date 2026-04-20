@@ -28,7 +28,7 @@ export const Testimonials = () => {
                   key={i}
                   className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-5"
                 >
-                  <div className="bg-surface border border-border shadow-sm rounded-2xl p-6 h-full flex flex-col">
+                  <div className="glass-card p-6 h-full flex flex-col">
                     <div className="flex gap-0.5 mb-4">
                       {Array.from({ length: 5 }).map((_, k) => (
                         <Star key={k} className="h-4 w-4 fill-brand-blue text-brand-blue" />

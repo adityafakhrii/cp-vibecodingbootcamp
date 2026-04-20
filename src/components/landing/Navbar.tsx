@@ -33,16 +33,13 @@ export const Navbar = () => {
 
   return (
     <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
-        scrolled ? "py-3" : "py-5"
-      )}
+      className="fixed top-4 inset-x-0 z-50 transition-all duration-300 px-4"
     >
-      <div className="container">
+      <div className="container max-w-5xl mx-auto p-0">
         <nav
           className={cn(
-            "flex items-center justify-between rounded-2xl px-4 md:px-6 py-3 transition-all",
-            scrolled || open ? "bg-surface border border-border shadow-sm" : ""
+            "flex items-center justify-between px-5 py-3 transition-all duration-300 border border-transparent",
+            scrolled || open ? "glass-nav py-3" : "py-4 bg-transparent border-transparent"
           )}
         >
           <a
@@ -113,7 +110,7 @@ export const Navbar = () => {
         <div
           id="mobile-menu"
           className={cn(
-            "relative mx-4 mt-[88px] rounded-2xl bg-surface p-5 border border-border shadow-md transition-all duration-300 origin-top",
+            "relative mx-4 mt-[88px] p-5 transition-all duration-300 origin-top glass-panel text-foreground",
             open ? "opacity-100 translate-y-0 scale-100" : "opacity-0 -translate-y-2 scale-[0.98]"
           )}
         >

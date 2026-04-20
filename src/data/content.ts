@@ -29,10 +29,10 @@ import {
 // ── Hero ─────────────────────────────────────────────
 export const hero = {
     badge: "Batch 1 dimulai 04 Mei — slot terbatas",
-    subtitle: "Punya Ide Aplikasi?",
-    titleLine1: "Jangan Nunggu Developer —",
-    titleLine2: "Bangun Sendiri",
-    titleHighlight: "Pakai AI.",
+    subtitle: "Punya Ide?",
+    titleLine1: "Bangun aplikasi Sendiri",
+    // titleLine2: "Pakai AI",
+    titleHighlight: "Tanpa Harus Jadi Programmer.",
     description:
         "Dalam 8 sesi, lo bakal ubah ide jadi aplikasi nyata yang bisa dipakai atau dijual — tanpa harus jadi programmer.",
     ctaText: "Gabung Batch 1 Sekarang",
