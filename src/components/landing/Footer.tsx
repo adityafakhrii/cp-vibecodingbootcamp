@@ -9,10 +9,10 @@ export const Footer = () => {
           <span className="h-7 w-7 rounded-lg bg-brand-blue flex items-center justify-center">
             <Sparkles className="h-3.5 w-3.5 text-primary-foreground" />
           </span>
-          Vibe<span className="text-brand-blue">Coding</span>
+          RuangAI Vibe<span className="text-brand-blue">Coding</span>
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Vibe Coding Bootcamp. Built with AI, of course.
+          © {new Date().getFullYear()} RuangAI Vibe Coding Bootcamp. Built with AI, of course.
         </p>
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
           {footerSocials.map((s) => (

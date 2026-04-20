@@ -51,7 +51,7 @@ export const Navbar = () => {
               <Sparkles className="h-4 w-4" />
             </span>
             <span className="text-base md:text-lg">
-              Vibe<span className="text-brand-blue">Coding</span>
+              RuangAI Vibe<span className="text-brand-blue">Coding</span>
             </span>
           </a>
 

@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# RuangAI Vibe Coding Bootcamp
 
-TODO: Document your project here
+Selamat datang di repositori RuangAI Vibe Coding Bootcamp.

@@ -336,7 +336,7 @@ export const pricingSection = {
     label: "HARGA",
     title: "Berapa harga buat bisa build aplikasi sendiri?",
     badgeText: "Promo Early Bird — Slot Terbatas",
-    planTitle: "Vibe Coding Bootcamp",
+    planTitle: "RuangAI Vibe Coding Bootcamp",
     planSubtitle: "Lebih murah dari bayar developer sekali.",
     price: "Rp700.000",
     originalPrice: "Rp2.000.000",
