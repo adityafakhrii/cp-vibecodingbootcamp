@@ -15,7 +15,7 @@ export const Mentor = () => {
         <SectionReveal className="max-w-4xl mx-auto">
           <div className="glass-panel p-7 md:p-10 grid md:grid-cols-[auto_1fr] gap-7 md:gap-10 items-center">
             <div className="relative mx-auto md:mx-0">
-              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-sm border border-border">
+              <div className="relative h-20 w-20 sm:h-28 sm:w-28 md:h-40 md:w-40 rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-border">
                 <img
                   src={mentorSection.photo}
                   alt={mentorSection.name}

@@ -24,7 +24,7 @@ export const Pricing = () => {
           {/* Subtle Outer Glow Edge */}
           <div className="absolute -inset-1 bg-gradient-to-r from-brand-blue to-brand-primary rounded-[2rem] blur-[20px] opacity-20 pointer-events-none" />
 
-          <div className="relative glass-card !rounded-[2.5rem] p-8 md:p-12 transition-all duration-500 overflow-hidden card-hover">
+          <div className="relative glass-card !rounded-3xl lg:!rounded-[2.5rem] p-6 sm:p-8 md:p-12 transition-all duration-500 overflow-hidden card-hover">
             <div className="absolute top-0 right-0 bg-brand-blue text-white text-[10px] sm:text-xs font-bold px-4 py-2 rounded-bl-2xl uppercase tracking-widest">
               Paling Laris
             </div>
@@ -34,11 +34,11 @@ export const Pricing = () => {
               {pricingSection.badgeText}
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-extrabold mb-2 text-foreground">{pricingSection.planTitle}</h3>
-            <p className="text-muted-foreground mb-10 font-medium text-sm sm:text-base">{pricingSection.planSubtitle}</p>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold mb-2 text-foreground">{pricingSection.planTitle}</h3>
+            <p className="text-muted-foreground mb-8 md:mb-10 font-medium text-sm sm:text-base">{pricingSection.planSubtitle}</p>
 
             <div className="flex flex-col sm:flex-row sm:items-end gap-3 mb-3">
-              <span className="text-5xl sm:text-6xl md:text-7xl font-black tracking-tight text-brand-blue">
+              <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-brand-blue">
                 {pricingSection.price}
               </span>
             </div>
@@ -66,7 +66,7 @@ export const Pricing = () => {
               ))}
             </ul>
 
-            <GradientButton asChildHref={pricingSection.ctaHref} size="lg" className="w-full text-base sm:text-lg py-6 sm:py-7">
+            <GradientButton asChildHref={pricingSection.ctaHref} size="xl" className="w-full mt-4">
               {pricingSection.ctaText}
             </GradientButton>
             <p className="text-xs text-muted-foreground text-center mt-5 font-medium">

@@ -26,16 +26,6 @@ export const FinalCTA = () => {
                   </GradientButton>
                 </div>
               </div>
-
-              <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                <div className="relative rounded-full overflow-hidden shadow-lg border-4 border-white lg:-mr-4 aspect-square max-w-[280px] lg:max-w-md w-full">
-                  <img
-                    src="/images/illustrations/cta_invite.png"
-                    alt="Professional giving a welcoming invitation"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
             </div>
           </div>
         </SectionReveal>
