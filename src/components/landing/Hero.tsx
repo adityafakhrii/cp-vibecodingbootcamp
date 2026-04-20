@@ -53,14 +53,14 @@ export const Hero = () => {
             {hero.description}
           </p>
 
-          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 w-full">
-            <GradientButton asChildHref={hero.ctaHref} size="lg" className="w-full sm:w-auto text-base py-6 px-10 shadow-xl shadow-brand-blue/30 hover:-translate-y-1">
+          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 w-full relative z-[110]">
+            <GradientButton asChildHref={hero.ctaHref} size="lg" className="w-full sm:w-auto flex-shrink-0">
               {hero.ctaText}
               <ArrowRight className="ml-2 h-5 w-5" />
             </GradientButton>
             <a
               href={hero.secondaryHref}
-              className="text-base font-semibold text-slate-500 hover:text-brand-dark transition-colors story-link underline underline-offset-8 decoration-slate-300 hover:decoration-brand-dark h-full flex items-center"
+              className="text-base font-semibold text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition-colors underline underline-offset-8 decoration-slate-300 hover:decoration-slate-400 dark:decoration-slate-600 dark:hover:decoration-slate-500 h-full flex items-center"
             >
               {hero.secondaryText}
             </a>
