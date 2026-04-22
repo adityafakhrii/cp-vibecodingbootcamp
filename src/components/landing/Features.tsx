@@ -3,7 +3,7 @@ import { SectionReveal } from "./SectionReveal";
 
 export const Features = () => {
   return (
-    <section className="py-20 md:py-28 bg-surface border-y border-border">
+    <section className="py-20 md:py-28 bg-surface dark:bg-background border-y border-border">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-14">
           <p className="text-sm font-semibold text-brand-blue uppercase tracking-wider mb-3">{featuresSection.label}</p>

@@ -7,11 +7,12 @@ export const Hero = () => {
   return (
     <section
       id="top"
-      className="relative pt-40 md:pt-30 pb-28 md:pb-30 bg-gradient-to-b from-blue-50/50 to-surface dark:from-slate-900 dark:to-background overflow-hidden"
+      className="relative pt-40 md:pt-30 pb-28 md:pb-30 bg-gradient-to-b from-[#e8f7ec] to-surface dark:from-[#0b1220] dark:to-background overflow-hidden"
     >
       <div className="bg-noise"></div>
       <div className="absolute inset-0 z-0 h-full w-full pointer-events-none">
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[400px] w-[600px] rounded-[100%] bg-blue-400/10 dark:bg-brand-blue/10 blur-[100px]"></div>
+        <div className="absolute left-[-10%] top-[-10%] -z-10 h-[600px] w-[600px] rounded-[100%] bg-[#42B549]/20 blur-[120px] dark:bg-brand-blue/10"></div>
+        <div className="absolute right-[-10%] top-[20%] -z-10 h-[400px] w-[400px] rounded-[100%] bg-[#6fdc8c]/15 blur-[100px] dark:hidden"></div>
       </div>
       <div className="container relative z-10">
         <SectionReveal className="max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -21,9 +22,9 @@ export const Hero = () => {
           </div>
 
           <h1 className="font-extrabold tracking-tight relative z-10">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[140%] max-w-2xl bg-blue-100/30 blur-[120px] rounded-[100%] pointer-events-none -z-10 dark:bg-brand-blue/10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[140%] max-w-2xl bg-[#42B549]/10 blur-[120px] rounded-[100%] pointer-events-none -z-10 dark:bg-brand-blue/10" />
 
-            <span className="block text-base sm:text-lg md:text-xl font-semibold text-brand-deep dark:text-brand-blue mb-5 sm:mb-6 uppercase tracking-widest drop-shadow-sm">
+            <span className="block text-base sm:text-lg md:text-xl font-semibold text-[#0f172a] dark:text-brand-blue mb-5 sm:mb-6 uppercase tracking-widest drop-shadow-sm">
               {hero.subtitle}
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-[1.05] text-foreground pb-2">
@@ -31,10 +32,10 @@ export const Hero = () => {
               <br className="hidden sm:block" />
               <span className="sm:hidden"> </span>
               {/* {hero.titleLine2}{" "} */}
-              <span className="relative inline-block whitespace-nowrap">
+              <span className="relative inline-block whitespace-normal md:whitespace-nowrap">
                 <span className="relative z-10 text-brand-blue">{hero.titleHighlight}</span>
                 <svg
-                  className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-4 sm:h-5 text-[#DBEAFE] -z-10"
+                  className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-4 sm:h-5 text-[#42B549]/20 -z-10"
                   viewBox="0 0 200 20"
                   preserveAspectRatio="none"
                 >

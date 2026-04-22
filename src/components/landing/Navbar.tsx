@@ -38,8 +38,8 @@ export const Navbar = () => {
       <div className="container max-w-5xl mx-auto p-0">
         <nav
           className={cn(
-            "flex items-center justify-between px-5 py-3 transition-all duration-300 border border-transparent",
-            scrolled || open ? "glass-nav py-3" : "py-4 bg-transparent border-transparent"
+            "flex items-center justify-between px-5 py-3 transition-all duration-300 glass-nav",
+            scrolled || open ? "shadow-md" : "shadow-sm border-transparent"
           )}
         >
           <a

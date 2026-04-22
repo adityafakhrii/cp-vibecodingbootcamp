@@ -3,7 +3,7 @@ import { SectionReveal } from "./SectionReveal";
 
 export const Mentor = () => {
   return (
-    <section id="mentor" className="py-20 md:py-28 bg-surface border-y border-border">
+    <section id="mentor" className="py-20 md:py-28 bg-surface dark:bg-background border-y border-border">
       <div className="container">
         <SectionReveal className="max-w-2xl mx-auto text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue mb-3">{mentorSection.label}</p>

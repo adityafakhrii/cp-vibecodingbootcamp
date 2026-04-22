@@ -22,8 +22,8 @@ export const GradientButton = forwardRef<HTMLButtonElement, GradientButtonProps>
 
     const styles = cn(
       {
-        "bg-[#1D4ED8] text-[#FFFFFF] hover:bg-[#1E40AF] opacity-100 backdrop-filter-none backdrop-blur-none shadow-sm hover:shadow-md border-none mix-blend-normal": variant === "primary",
-        "bg-white/30 dark:bg-slate-800/30 backdrop-blur-[12px] border border-white/40 dark:border-white/10 hover:bg-white/50 dark:hover:bg-slate-800/50 hover:scale-[1.02] text-slate-800 dark:text-slate-100 shadow-sm transition-all": variant === "ghost",
+        "bg-gradient-to-r from-[#42B549] to-[#6fdc8c] text-white hover:scale-[1.02] hover:shadow-[0_4px_20px_rgba(66,181,73,0.3)] border-none": variant === "primary",
+        "bg-transparent border border-border/80 hover:bg-[#42B549]/10 hover:border-[#42B549]/30 hover:scale-[1.02] text-foreground shadow-sm transition-all": variant === "ghost",
       }
     );
 
