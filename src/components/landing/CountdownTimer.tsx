@@ -59,7 +59,7 @@ export const CountdownTimer = () => {
             <Timer className="h-5 w-5 text-foreground" strokeWidth={1.75} />
           </div>
           <div>
-            <p className="text-[10px] font-semibold tracking-widest uppercase text-gradient-brand">
+            <p className="text-[10px] font-semibold tracking-widest uppercase text-brand-blue">
               Promo Berakhir Dalam
             </p>
             <p className="text-xs text-muted-foreground hidden sm:block mt-0.5">
@@ -74,7 +74,7 @@ export const CountdownTimer = () => {
               key={b.label}
               className="rounded-xl border border-border/60 bg-background/40 px-2 py-3 text-center"
             >
-              <div className="text-2xl sm:text-3xl font-extrabold tracking-tight tabular-nums text-gradient-brand">
+              <div className="text-2xl sm:text-3xl font-extrabold tracking-tight tabular-nums text-foreground">
                 {b.value}
               </div>
               <div className="text-[10px] sm:text-xs uppercase tracking-wider text-muted-foreground mt-1">

@@ -23,6 +23,10 @@ import {
     Layers,
     Clock,
     CalendarClock,
+    Instagram,
+    Linkedin,
+    Github,
+    ExternalLink,
     type LucideIcon,
 } from "lucide-react";
 
@@ -30,11 +34,10 @@ import {
 export const hero = {
     badge: "Batch 1 dimulai 04 Mei — slot terbatas",
     subtitle: "Punya Ide?",
-    titleLine1: "Bangun aplikasi Sendiri",
-    // titleLine2: "Pakai AI",
+    titleLine1: "Bangun Aplikasi Sendiri",
     titleHighlight: "Tanpa Harus Jadi Programmer.",
     description:
-        "Dalam 8 sesi, lo bakal ubah ide jadi aplikasi nyata yang bisa dipakai atau dijual — tanpa harus jadi programmer.",
+        "Dalam 8 sesi, kamu akan mengubah ide menjadi aplikasi nyata yang bisa digunakan atau dijual — tanpa harus menjadi programmer.",
     ctaText: "Gabung Batch 1 Sekarang",
     ctaHref: "https://ruangai.id",
     secondaryText: "Lihat Roadmap",
@@ -50,28 +53,28 @@ export interface ProblemItem {
 
 export const problemSection = {
     label: "MASALAHNYA",
-    title: "Masalahnya bukan ide lo.",
-    subtitle: "Tapi lo gak bisa ngejalanin. Dan akhirnya… semuanya berhenti di kepala.",
+    title: "Masalahnya bukan di ide kamu.",
+    subtitle: "Tapi kamu belum tahu cara mengeksekusinya. Dan akhirnya… semuanya berhenti di kepala.",
     items: [
         {
             icon: Lightbulb,
-            title: "Ide Gak Pernah Jadi Produk",
-            desc: "Udah kepikiran dari lama, tapi sampai sekarang masih sebatas omongan dan impian.",
+            title: "Ide Tidak Pernah Jadi Produk",
+            desc: "Sudah terpikirkan sejak lama, tapi sampai sekarang masih sebatas rencana dan impian.",
         },
         {
             icon: Wallet,
             title: "Hire Developer Mahal & Lama",
-            desc: "Ngerjain MVP aja bisa tembus puluhan juta, dan belum tentu hasilnya langsung bisa dipakai.",
+            desc: "Mengerjakan MVP saja bisa menghabiskan puluhan juta, dan belum tentu hasilnya langsung bisa digunakan.",
         },
         {
             icon: Bot,
-            title: "Gak Tau Cara Pakai AI",
-            desc: "AI banyak, tapi lo butuh workflow nyata buat eksekusi dari nol sampai deploy.",
+            title: "Belum Tahu Cara Pakai AI",
+            desc: "AI memang banyak, tapi kamu butuh workflow nyata untuk eksekusi dari nol sampai deploy.",
         },
         {
             icon: Code2,
-            title: "Belajar Coding Kelamaan",
-            desc: "Syntax bikin pusing. Waktu lo habis muter-muter belajar teori yang gak nyelesaiin produk lo.",
+            title: "Belajar Coding Terlalu Lama",
+            desc: "Syntax bikin pusing. Waktu kamu habis berputar-putar belajar teori yang tidak menyelesaikan produk.",
         },
     ] as ProblemItem[],
 };
@@ -79,21 +82,21 @@ export const problemSection = {
 // ── Solution ─────────────────────────────────────────
 export const solutionSection = {
     label: "SOLUSINYA",
-    title: "Di sini lo gak belajar coding.",
-    titleHighlight: "Lo belajar bikin produk.",
+    title: "Di sini kamu tidak belajar coding.",
+    titleHighlight: "Kamu belajar bikin produk.",
     titleSuffix: "",
     description:
-        "Keluar dari sini, lo bawa skill praktis untuk ngubah ide apa pun jadi aplikasi nyata yang siap dirilis ke market.",
+        "Setelah mengikuti program ini, kamu akan membawa pulang skill praktis untuk mengubah ide apa pun menjadi aplikasi nyata yang siap dirilis ke market.",
     points: [
         "Dari ide → jadi aplikasi live",
-        "Dari nol → bisa dipakai orang",
-        "Dari bingung → punya sistem rilis jelas",
+        "Dari nol → bisa digunakan orang",
+        "Dari bingung → punya sistem rilis yang jelas",
         "Mentoring langsung dari real builder",
     ],
     steps: [
         { tag: "01 · IDE", text: "Aplikasi tracking ibadah harian" },
         { tag: "02 · AI", text: "Generate UI + database schema" },
-        { tag: "03 · BUILD", text: "Iterate fitur bareng AI agent" },
+        { tag: "03 · BUILD", text: "Iterasi fitur bersama AI agent" },
         { tag: "04 · SHIP", text: "Deploy cepat & share ke user" },
     ],
 };
@@ -109,29 +112,29 @@ export interface ProjectLevel {
 
 export const projectsSection = {
     label: "PROJECT OUTPUT",
-    title: "Keluar dari sini, lo bawa hasil.",
-    subtitle: "Bukan cuma ngerti — tapi punya 3 project nyata yang bisa lo pakai, pamerin, atau jual.",
+    title: "Selesai program, kamu bawa hasil.",
+    subtitle: "Bukan cuma paham teori — tapi punya 3 project nyata yang bisa dipakai, dipamerkan, atau dijual.",
     levels: [
         {
             level: "Level 1",
             icon: Globe,
-            title: "Portfolio Website",
-            desc: "Punya website personal / company profile profesional yang udah live dan bisa diakses publik secara instan.",
-            tags: ["Landing Page", "Deploy Cepat", "Responsive"],
+            title: "Personal Portfolio Website",
+            desc: "Bangun website portofolio personal yang profesional — tampilkan profil, skill, dan project kamu. Langsung live dengan domain sendiri dan bisa diakses siapa saja.",
+            tags: ["Landing Page", "Responsive Design", "Custom Domain"],
         },
         {
             level: "Level 2",
             icon: Store,
-            title: "Biz POS System",
-            desc: "Aplikasi kasir & dashboard bisnis beroperasi penuh, dilengkapi sistem database dan analytics nyata.",
-            tags: ["Database", "Auth", "Produk Internal"],
+            title: "Brand Website + Online Store",
+            desc: "Buat website brand lengkap dengan fitur transaksi — katalog produk, keranjang belanja, dan sistem checkout. Cocok untuk bisnis online yang siap terima pesanan.",
+            tags: ["E-Commerce", "Database", "Payment Gateway"],
         },
         {
             level: "Level 3",
             icon: Sparkles,
-            title: "Full AI SaaS",
-            desc: "Sistem aplikasi cerdas yang langsung nyambung dengan engine AI — persis seperti ChatGPT custom.",
-            tags: ["LLM Integration", "SaaS Model", "Market-Ready"],
+            title: "AI SaaS — Gemini API",
+            desc: "Bangun aplikasi SaaS cerdas yang terintegrasi langsung dengan Google Gemini API — bisa generate teks, analisis data, atau jadi AI assistant custom sesuai kebutuhan.",
+            tags: ["Gemini LLM", "AI Integration", "SaaS Model"],
         },
     ] as ProjectLevel[],
 };
@@ -147,68 +150,68 @@ export interface Session {
 
 export const roadmapSection = {
     label: "ROADMAP",
-    title: "Udah kita susun. ",
-    titleHighlight: "Tinggal lo jalanin.",
+    title: "Sudah kami susun. ",
+    titleHighlight: "Tinggal kamu jalankan.",
     subtitle:
-        "Dalam 8 sesi, lo akan dibimbing dari nol sampai punya aplikasi berbasis AI.",
+        "Dalam 8 sesi, kamu akan dibimbing dari nol sampai punya aplikasi berbasis AI.",
     bonusTitle: "Best Project Award",
     bonusDesc:
-        "Peserta dengan eksekusi project terbaik akan mendapatkan reward direct dari kita.",
+        "Peserta dengan eksekusi project terbaik akan mendapatkan reward langsung dari kami.",
     sessions: [
         {
             n: 1,
             icon: Lightbulb,
             title: "Mindset & Idea Validation",
-            desc: "Ubah cara lo melihat coding dan breakdown ide jadi struktur aplikasi.",
+            desc: "Ubah cara kamu melihat coding dan breakdown ide menjadi struktur aplikasi.",
             output: "Ide project + struktur jelas",
         },
         {
             n: 2,
             icon: Sparkles,
             title: "Prompting Skill",
-            desc: "Belajar cara 'ngomong' ke AI biar bisa generate aplikasi sesuai keinginan.",
+            desc: "Belajar cara 'berkomunikasi' dengan AI agar bisa menghasilkan aplikasi sesuai keinginan.",
             output: "Prompt siap pakai",
         },
         {
             n: 3,
             icon: Monitor,
             title: "Build Landing Page",
-            desc: "Bikin landing page profesional untuk produk lo.",
+            desc: "Buat landing page profesional untuk produk kamu.",
             output: "Landing page live",
         },
         {
             n: 4,
             icon: AppWindow,
             title: "Build Web App",
-            desc: "Mulai bangun aplikasi utama dari nol pakai AI.",
+            desc: "Mulai membangun aplikasi utama dari nol menggunakan AI.",
             output: "Web app basic",
         },
         {
             n: 5,
             icon: Bot,
             title: "AI Integration",
-            desc: "Tambahin fitur AI biar aplikasi lo lebih pintar.",
+            desc: "Tambahkan fitur AI agar aplikasi kamu lebih pintar.",
             output: "AI-powered feature",
         },
         {
             n: 6,
             icon: Sliders,
             title: "Improvement & Feature Expansion",
-            desc: "Upgrade aplikasi jadi lebih usable dan real.",
+            desc: "Upgrade aplikasi menjadi lebih usable dan siap pakai.",
             output: "App lebih kompleks",
         },
         {
             n: 7,
             icon: Rocket,
             title: "Deploy & Publish",
-            desc: "Launch aplikasi lo ke internet.",
+            desc: "Luncurkan aplikasi kamu ke internet.",
             output: "App live + domain",
         },
         {
             n: 8,
             icon: Trophy,
             title: "Monetization & Showcase",
-            desc: "Belajar cara jual / manfaatin aplikasi lo.",
+            desc: "Pelajari cara menjual / memanfaatkan aplikasi kamu.",
             output: "Project siap dipakai / dijual",
         },
     ] as Session[],
@@ -218,7 +221,49 @@ export const roadmapSection = {
 export const scheduleSection = {
     label: "JADWAL & TIMELINE",
     title: "Jadwal Program",
-    subtitle: "Format jelas, waktu fleksibel, dan bisa diikuti siapa aja.",
+    subtitle: "Format jelas, waktu fleksibel, dan bisa diikuti siapa saja.",
+    batches: [
+        {
+            number: 1,
+            status: "open",
+            statusLabel: "Daftar Sekarang",
+            startDate: "04 Mei 2026",
+            schedule: "Senin dan Kamis, 19.00 WIB",
+            note: "Kelas dibuka per batch. Pastikan kamu tidak ketinggalan batch ini!",
+        },
+        {
+            number: 2,
+            status: "coming_soon",
+            statusLabel: "Coming Soon",
+            startDate: "Juli 2026",
+            schedule: "TBA",
+            note: "",
+        },
+        {
+            number: 3,
+            status: "coming_soon",
+            statusLabel: "Coming Soon",
+            startDate: "September 2026",
+            schedule: "TBA",
+            note: "",
+        },
+        {
+            number: 4,
+            status: "coming_soon",
+            statusLabel: "Coming Soon",
+            startDate: "November 2026",
+            schedule: "TBA",
+            note: "",
+        },
+        {
+            number: 5,
+            status: "coming_soon",
+            statusLabel: "Coming Soon",
+            startDate: "Januari 2027",
+            schedule: "TBA",
+            note: "",
+        },
+    ],
     mainInfo: [
         { icon: Calendar, label: "Tanggal Mulai", value: "04 Mei 2026" },
         { icon: Layers, label: "Durasi", value: "8 Sesi" },
@@ -242,36 +287,69 @@ export interface Feature {
 }
 
 export const featuresSection = {
-    label: "YANG LO DAPETIN",
-    title: "Semua yang lo butuhin buat mulai.",
+    label: "YANG KAMU DAPATKAN",
+    title: "Semua yang kamu butuhkan untuk mulai.",
     features: [
         { icon: Video, title: "Praktik Langsung", desc: "Belajar langsung lewat praktik, bukan teori." },
-        { icon: MessageCircle, title: "Real-Time Mentoring", desc: "Mentoring real-time saat lo stuck." },
-        { icon: Users, title: "Akses Komunitas", desc: "Komunitas buat diskusi & sharing." },
-        { icon: Library, title: "Rekaman Lifetime", desc: "Akses rekaman tanpa batas." },
+        { icon: MessageCircle, title: "Real-Time Mentoring", desc: "Mentoring real-time saat kamu stuck." },
+        { icon: Users, title: "Akses Komunitas", desc: "Komunitas untuk diskusi & sharing." },
+        { icon: Library, title: "Rekaman Lifetime", desc: "Akses rekaman tanpa batas waktu." },
     ] as Feature[],
 };
 
 // ── Mentor ───────────────────────────────────────────
 export const mentorSection = {
     label: "MENTOR",
-    title: "Belajar langsung dari builder.",
+    title: "Belajar Langsung dari Praktisi Web Development & AI",
     name: "Aditya Fakhri Riansyah",
-    role: "Web Developer & Mentor — CODEPOLITAN",
-    photo: "https://www.adityafakhri.com/foto-adit.webp",
-    bio: "Fokusnya bukan ngajarin teori. Tapi bikin lo beneran bisa build.",
+    role: "Web Developer & Mentor",
+    photo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778144134318-frxql8.webp",
+    bio: "Web & Mobile Developer, Mentor Pemrograman, dan Pembicara Teknologi. Lulusan Terbaik Universitas Widyatama & Program Bangkit 2023. Aktif di Google Developer Groups Bandung dan telah membimbing ratusan peserta dari nol hingga siap berkarya di dunia digital.",
+    yangPalingPenting: "Cara ngajarnya ringan, jelas, dan gampang dicerna — bahkan buat kamu yang baru mulai atau gak punya background IT.",
+    highlightsIntro: "Mentor kamu bukan sekadar pengajar — tapi seorang Web Developer dan AI Builder profesional yang udah punya:",
+    highlights: [
+        "5+ tahun pengalaman nyata di industri Web Development",
+        "Hands-on sebagai Full-Stack Developer di berbagai proyek nyata",
+        "Spesialisasi kuat di AI-powered app development dengan fondasi teknis yang solid",
+        "Lulusan Terbaik di Universitas Widyatama & Google Bangkit Academy 2023",
+        "Aktif mengajar di CODEPOLITAN dan komunitas Google Developer Groups Bandung",
+    ],
     chips: [
-        { icon: Code, label: "Web Developer" },
+        { icon: Code, label: "Web & Mobile Developer" },
         { icon: GraduationCap, label: "Mentor di CODEPOLITAN" },
-        { icon: Award, label: "Builder real-world apps" },
+        { icon: Award, label: "Lulusan Terbaik Bangkit 2023" },
     ] as { icon: LucideIcon; label: string }[],
+    socials: [
+        { icon: Instagram, label: "Instagram", href: "https://instagram.com/adityafakhrii" },
+        { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/adityafakhrii/" },
+        { icon: Github, label: "GitHub", href: "https://github.com/adityafakhrii" },
+        { icon: ExternalLink, label: "Website", href: "https://adityafakhri.com" },
+    ] as { icon: LucideIcon; label: string; href: string }[],
+    organizations: [
+        {
+            name: "CODEPOLITAN",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778142629573-eetalh.webp",
+        },
+        {
+            name: "RuangAI",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778144021253-sf0vwo.webp",
+        },
+        {
+            name: "GDG Bandung",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778378613559-kfjaoi.webp",
+        },
+        {
+            name: "Bangkit",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Bangkit-logo.png",
+        },
+    ],
 };
 
 // ── Tools ────────────────────────────────────────────
 export const toolsSection = {
     label: "TOOLS",
     title: "Tools yang dipakai builder hari ini.",
-    subtitle: "Bukan tools lama — tapi stack modern buat build cepat.",
+    subtitle: "Bukan tools lama — tapi stack modern untuk build cepat.",
     tools: ["Lovable", "Bolt.new", "Base44", "v0", "Google Antigravity", "Git", "GitHub", "NPM"],
 };
 
@@ -288,43 +366,43 @@ export const testimonialsSection = {
     items: [
         {
             quote:
-                "Dulu gue bayar developer 15 juta cuma buat MVP. Sekarang gue bisa bikin sendiri dalam 3 hari pakai workflow yang diajarin di sini.",
+                "Dulu saya bayar developer 15 juta hanya untuk MVP. Sekarang saya bisa membuatnya sendiri dalam 3 hari menggunakan workflow yang diajarkan di sini.",
             name: "Rara Wijaya",
             role: "Founder, Skincare Brand",
         },
         {
             quote:
-                "Gue background marketing, gak ngerti coding sama sekali. Selesai bootcamp, gue udah deploy dashboard internal buat tim sendiri.",
+                "Saya dari background marketing, tidak mengerti coding sama sekali. Selesai bootcamp, saya sudah deploy dashboard internal untuk tim sendiri.",
             name: "Bagas Pratama",
             role: "Marketing Lead",
         },
         {
             quote:
-                "Materinya straight to the point. Gak ada teori bertele-tele — langsung praktek dan hasilnya kelihatan tiap sesi.",
+                "Materinya straight to the point. Tidak ada teori bertele-tele — langsung praktek dan hasilnya terlihat setiap sesi.",
             name: "Nadia Salsabila",
             role: "Product Designer",
         },
         {
             quote:
-                "Awalnya skeptis karena nggak punya basic IT, tapi cara ngajarnya asik banget. Sekarang lagi build MVP aplikasi kasir buat toko nyokap!",
+                "Awalnya skeptis karena tidak punya basic IT, tapi cara mengajarnya asyik sekali. Sekarang sedang build MVP aplikasi kasir untuk toko ibu!",
             name: "Budi Santoso",
             role: "Mahasiswa",
         },
         {
             quote:
-                "Gak kerasa 8 sesi udah bisa bikin AI app sendiri. Prompting skill gue naik drastis. Recommended banget buat temen-temen non-tech.",
+                "Tidak terasa 8 sesi sudah bisa bikin AI app sendiri. Prompting skill saya meningkat drastis. Sangat direkomendasikan untuk teman-teman non-tech.",
             name: "Amanda Larasati",
             role: "Content Creator",
         },
         {
             quote:
-                "Investasi ilmu yang worth it parah. Daripada ngabisin waktu nonton tutorial berjam-jam tapi ngga ada hasil, di sini dipaksa praktek.",
+                "Investasi ilmu yang sangat worth it. Daripada menghabiskan waktu menonton tutorial berjam-jam tanpa hasil, di sini langsung dipaksa praktek.",
             name: "Kevin Aditya",
             role: "Freelancer",
         },
         {
             quote:
-                "Gila sih, tools AI jaman sekarang emang game changer. Mentornya sabar banget ngajarin dari nol sampe kita beneran ngerti alurnya.",
+                "Luar biasa, tools AI zaman sekarang memang game changer. Mentornya sabar sekali mengajarkan dari nol sampai kita benar-benar paham alurnya.",
             name: "Siti Aisyah",
             role: "UMKM Owner",
         },
@@ -332,28 +410,66 @@ export const testimonialsSection = {
 };
 
 // ── Pricing ──────────────────────────────────────────
+export interface PricingPlan {
+    name: string;
+    badge?: string;
+    recommended?: boolean;
+    price: string;
+    originalPrice: string;
+    discount: string;
+    subtitle: string;
+    includes: string[];
+    ctaText: string;
+    ctaHref: string;
+}
+
 export const pricingSection = {
     label: "HARGA",
-    title: "Berapa harga buat bisa build aplikasi sendiri?",
-    badgeText: "Promo Early Bird — Slot Terbatas",
-    planTitle: "RuangAI Vibe Coding Bootcamp",
-    planSubtitle: "Lebih murah dari bayar developer sekali.",
-    price: "Rp700.000",
-    originalPrice: "Rp2.000.000",
-    discount: "HEMAT 65%",
+    title: "Berapa harga untuk bisa build aplikasi sendiri?",
+    subtitle: "Promo khusus batch pertama — jangan sampai tertinggal.",
     urgencyNote: "Slot terbatas",
     urgencyDetail: "— harga akan naik setelah batch ini terisi penuh.",
-    ctaText: "Amankan Slot Sekarang",
-    ctaHref: "https://ruangai.id",
     footnote: "Pembayaran sekali. Akses selamanya.",
-    includes: [
-        "8x sesi live intensif",
-        "Lifetime akses recording",
-        "Akses komunitas builder",
-        "Mentoring support langsung",
-        "Modul terstruktur dari nol",
-        "Sertifikat kelulusan",
-    ],
+    plans: [
+        {
+            name: "Basic",
+            price: "Rp649.000",
+            originalPrice: "Rp2.000.000",
+            discount: "HEMAT 67%",
+            subtitle: "Paket standar bootcamp — semua yang kamu butuhkan untuk mulai build.",
+            includes: [
+                "8x sesi live intensif",
+                "Lifetime akses recording",
+                "Akses komunitas builder",
+                "Mentoring support langsung",
+                "Modul terstruktur dari nol",
+                "Sertifikat kelulusan",
+            ],
+            ctaText: "Pilih Paket Basic",
+            ctaHref: "https://ruangai.id",
+        },
+        {
+            name: "Pro",
+            badge: "Best Value",
+            recommended: true,
+            price: "Rp720.000",
+            originalPrice: "Rp2.500.000",
+            discount: "HEMAT 71%",
+            subtitle: "Semua di Basic + bonus eksklusif untuk percepat skill kamu.",
+            includes: [
+                "8x sesi live intensif",
+                "Lifetime akses recording",
+                "Akses komunitas builder",
+                "Mentoring support langsung",
+                "Modul terstruktur dari nol",
+                "Sertifikat kelulusan",
+                "Bonus: Berbagai materi studi kasus nyata",
+                "Bonus: Rekaman webinar premium Vibe Coding (Video RuangAI)",
+            ],
+            ctaText: "Pilih Paket Pro",
+            ctaHref: "https://ruangai.id",
+        },
+    ] as PricingPlan[],
 };
 
 // ── FAQ ──────────────────────────────────────────────
@@ -367,28 +483,28 @@ export const faqSection = {
     title: "Masih ada pertanyaan?",
     faqs: [
         {
-            q: "Gue bener-bener pemula, bisa ikut?",
-            a: "Bisa banget. Bootcamp ini emang dirancang khusus buat non-tech people. Lo gak butuh background coding sama sekali — kita mulai dari nol.",
+            q: "Saya benar-benar pemula, bisa ikut?",
+            a: "Tentu saja. Bootcamp ini memang dirancang khusus untuk non-tech people. Kamu tidak butuh background coding sama sekali — kami mulai dari nol.",
         },
         {
             q: "Apa harus bisa coding dulu?",
-            a: "Tidak. Justru ini bootcamp pertama yang fokus ngajarin lo build pakai AI tanpa harus ngerti syntax. AI yang nulis codenya, lo yang ngarahin.",
+            a: "Tidak. Justru ini bootcamp pertama yang fokus mengajarkan kamu build menggunakan AI tanpa harus memahami syntax. AI yang menulis code-nya, kamu yang mengarahkan.",
         },
         {
-            q: "Apakah gue beneran bisa bikin aplikasi setelah lulus?",
-            a: "Iya. Setiap level lo akan deploy aplikasi nyata — dari portfolio, POS, sampai AI app. Gak cuma teori, lo punya 3 produk live setelah lulus.",
+            q: "Apakah saya benar-benar bisa bikin aplikasi setelah lulus?",
+            a: "Iya. Setiap level kamu akan deploy aplikasi nyata — dari portfolio, POS, sampai AI app. Bukan cuma teori, kamu punya 3 produk live setelah lulus.",
         },
         {
-            q: "Kalau gue ketinggalan sesi live gimana?",
-            a: "Tenang, semua sesi direkam dan bisa diakses selamanya. Lo juga bisa nanya di komunitas atau langsung ke mentor.",
+            q: "Kalau saya ketinggalan sesi live, bagaimana?",
+            a: "Tenang, semua sesi direkam dan bisa diakses selamanya. Kamu juga bisa bertanya di komunitas atau langsung ke mentor.",
         },
         {
-            q: "Tools-nya berbayar gak?",
-            a: "Mostly tools yang kita pakai punya free tier yang cukup buat belajar. Kalau lo mau scale up nanti tinggal upgrade sesuai kebutuhan project.",
+            q: "Tools-nya berbayar tidak?",
+            a: "Sebagian besar tools yang kami gunakan memiliki free tier yang cukup untuk belajar. Kalau kamu ingin scale up nantinya, tinggal upgrade sesuai kebutuhan project.",
         },
         {
-            q: "Gimana cara bayarnya?",
-            a: "Setelah klik 'Amankan Slot Sekarang', lo akan diarahkan ke halaman pembayaran. Pembayaran sekali, akses selamanya.",
+            q: "Bagaimana cara bayarnya?",
+            a: "Setelah klik 'Pilih Paket', kamu akan diarahkan ke halaman pembayaran. Pembayaran sekali, akses selamanya.",
         },
     ] as FAQItem[],
 };
@@ -397,7 +513,7 @@ export const faqSection = {
 export const finalCTA = {
     title: "Yang mulai duluan, ",
     titleHighlight: "menang duluan.",
-    subtitle: "Batch 1 dimulai 04 Mei. Kalau lo masih nunggu, orang lain udah launch duluan.",
+    subtitle: "Batch 1 dimulai 04 Mei. Kalau kamu masih menunggu, orang lain sudah launch duluan.",
     ctaText: "Amankan Slot Sekarang",
     ctaHref: "https://ruangai.id",
 };

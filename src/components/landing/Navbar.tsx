@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { navLinks, navCTA } from "@/data/content";
 import { GradientButton } from "./GradientButton";
 import { ThemeToggle } from "./ThemeToggle";
-import { Sparkles, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const LOGO_URL = "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778142629573-eetalh.webp";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,13 +35,13 @@ export const Navbar = () => {
 
   return (
     <header
-      className="fixed top-4 inset-x-0 z-50 transition-all duration-300 px-4"
+      className="fixed top-4 inset-x-0 z-50 transition-all duration-300 px-8"
     >
       <div className="container max-w-5xl mx-auto p-0">
         <nav
           className={cn(
-            "flex items-center justify-between px-5 py-3 transition-all duration-300 border border-transparent",
-            scrolled || open ? "glass-nav py-3" : "py-4 bg-transparent border-transparent"
+            "flex items-center justify-between px-6 py-2 transition-all duration-300 glass-nav",
+            scrolled || open ? "shadow-md" : "shadow-sm border-transparent"
           )}
         >
           <a
@@ -47,15 +49,17 @@ export const Navbar = () => {
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 font-bold tracking-tight"
           >
-            <span className="h-8 w-8 rounded-lg bg-brand-blue flex items-center justify-center text-primary-foreground">
-              <Sparkles className="h-4 w-4" />
-            </span>
-            <span className="text-base md:text-lg">
-              RuangAI Vibe<span className="text-brand-blue">Coding</span>
-            </span>
+            <img
+              src={LOGO_URL}
+              alt="CODEPOLITAN"
+              className="h-8 w-auto rounded-lg object-contain"
+            />
+            {/* <span className="text-base md:text-lg">
+              CODEPOLITAN <span className="text-brand-blue">Vibe Coding</span>
+            </span> */}
           </a>
 
-          <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -78,7 +82,7 @@ export const Navbar = () => {
               aria-label={open ? "Tutup menu" : "Buka menu"}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-border bg-surface text-foreground hover:bg-secondary transition-colors"
+              className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-border bg-surface text-foreground hover:bg-secondary transition-colors"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>

@@ -6,7 +6,7 @@ export const ThemeToggle = () => {
 
   useEffect(() => {
     const saved = localStorage.getItem("vcb-theme");
-    const dark = saved ? saved === "dark" : true;
+    const dark = saved ? saved === "dark" : false;
     setIsDark(dark);
     document.documentElement.classList.toggle("dark", dark);
   }, []);

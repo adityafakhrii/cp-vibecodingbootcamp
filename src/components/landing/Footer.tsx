@@ -1,18 +1,20 @@
 import { footerSocials } from "@/data/content";
-import { Sparkles } from "lucide-react";
+
+const LOGO_URL = "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778142629573-eetalh.webp";
 
 export const Footer = () => {
   return (
     <footer className="py-10 border-t border-border bg-background">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2 font-bold">
-          <span className="h-7 w-7 rounded-lg bg-brand-blue flex items-center justify-center">
-            <Sparkles className="h-3.5 w-3.5 text-primary-foreground" />
-          </span>
-          RuangAI Vibe<span className="text-brand-blue">Coding</span>
+          <img
+            src={LOGO_URL}
+            alt="CODEPOLITAN"
+            className="h-12 w-15 rounded-lg object-contain"
+          />
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} RuangAI Vibe Coding Bootcamp. Built with AI, of course.
+          © {new Date().getFullYear()} CODEPOLITAN Vibe Coding Bootcamp. Built with AI, of course.
         </p>
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
           {footerSocials.map((s) => (
