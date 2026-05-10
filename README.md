@@ -1,6 +1,6 @@
-# RuangAI Vibe Coding Bootcamp
+# CODEPOLITAN Vibe Coding Bootcamp
 
-RuangAI Vibe Coding Bootcamp adalah repositori aplikasi web pendaftaran bootcamp interaktif. Proyek ini dibangun dengan fokus pada performa tinggi, pengalaman pengguna yang premium melalui antarmuka bergaya glassmorphism, dan optimasi SEO menyeluruh.
+CODEPOLITAN Vibe Coding Bootcamp adalah repositori aplikasi web pendaftaran bootcamp interaktif. Proyek ini dibangun dengan fokus pada performa tinggi, pengalaman pengguna yang premium melalui antarmuka bergaya glassmorphism, dan optimasi SEO menyeluruh.
 
 ## Teknologi Utama
 

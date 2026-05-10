@@ -39,7 +39,7 @@ export const hero = {
     description:
         "Dalam 8 sesi, kamu akan mengubah ide menjadi aplikasi nyata yang bisa digunakan atau dijual — tanpa harus menjadi programmer.",
     ctaText: "Gabung Batch 1 Sekarang",
-    ctaHref: "https://ruangai.id",
+    ctaHref: "https://codepolitan.com",
     secondaryText: "Lihat Roadmap",
     secondaryHref: "#roadmap",
 };
@@ -492,7 +492,7 @@ export const pricingSection = {
                 "Sertifikat kelulusan",
             ],
             ctaText: "Pilih Paket Basic",
-            ctaHref: "https://ruangai.id",
+            ctaHref: "https://codepolitan.com",
         },
         {
             name: "Pro",
@@ -510,10 +510,10 @@ export const pricingSection = {
                 "Modul terstruktur dari nol",
                 "Sertifikat kelulusan",
                 "Bonus: Berbagai materi studi kasus nyata",
-                "Bonus: Rekaman webinar premium Vibe Coding (Video RuangAI)",
+                "Bonus: Rekaman webinar premium Vibe Coding (Video CODEPOLITAN)",
             ],
             ctaText: "Pilih Paket Pro",
-            ctaHref: "https://ruangai.id",
+            ctaHref: "https://codepolitan.com",
         },
     ] as PricingPlan[],
 };
@@ -561,7 +561,7 @@ export const finalCTA = {
     titleHighlight: "menang duluan.",
     subtitle: "Batch 1 dimulai 04 Mei. Kalau kamu masih menunggu, orang lain sudah launch duluan.",
     ctaText: "Amankan Slot Sekarang",
-    ctaHref: "https://ruangai.id",
+    ctaHref: "https://codepolitan.com",
 };
 
 // ── Navbar ───────────────────────────────────────────
@@ -576,7 +576,7 @@ export const navLinks = [
 
 export const navCTA = {
     text: "Gabung Sekarang",
-    href: "https://ruangai.id",
+    href: "https://codepolitan.com",
 };
 
 // ── Footer ───────────────────────────────────────────
