@@ -12,9 +12,9 @@ export const Features = () => {
           </h2>
         </SectionReveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {featuresSection.features.map((f, i) => (
-            <SectionReveal key={f.title} delay={i * 60} className={i === 0 ? "lg:col-span-2" : ""}>
+            <SectionReveal key={f.title} delay={i * 60}>
               <div className="glass-card p-6 h-full flex gap-4 card-hover overflow-hidden relative">
                 <div className="h-11 w-11 rounded-xl bg-brand-blue/10 flex items-center justify-center shrink-0">
                   <f.icon className="h-5 w-5 text-brand-blue" />

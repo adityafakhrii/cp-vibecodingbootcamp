@@ -345,12 +345,58 @@ export const mentorSection = {
     ],
 };
 
-// ── Tools ────────────────────────────────────────────
+export interface Tool {
+    name: string;
+    logo: string;
+    href: string;
+}
+
 export const toolsSection = {
     label: "TOOLS",
     title: "Tools yang dipakai builder hari ini.",
     subtitle: "Bukan tools lama — tapi stack modern untuk build cepat.",
-    tools: ["Lovable", "Bolt.new", "Base44", "v0", "Google Antigravity", "Git", "GitHub", "NPM"],
+    tools: [
+        {
+            name: "Lovable",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389479197-fdu8fo.webp",
+            href: "https://lovable.dev/",
+        },
+        {
+            name: "Bolt.new",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389478680-fz9xj5.webp",
+            href: "https://bolt.new/",
+        },
+        {
+            name: "Base44",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389478021-mief81.webp",
+            href: "https://base44.com/",
+        },
+        {
+            name: "v0",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389477190-r7ch0w.webp",
+            href: "https://v0.app/",
+        },
+        {
+            name: "Google Antigravity",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389476254-fypjcx.webp",
+            href: "https://antigravity.google/",
+        },
+        {
+            name: "Git",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389475550-dd9s4k.webp",
+            href: "https://git-scm.com/",
+        },
+        {
+            name: "GitHub",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389474622-86brxc.webp",
+            href: "https://github.com/",
+        },
+        {
+            name: "Node.js",
+            logo: "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778389732077-7fhxao.webp",
+            href: "https://nodejs.org/en",
+        },
+    ] as Tool[],
 };
 
 // ── Testimonials ─────────────────────────────────────
