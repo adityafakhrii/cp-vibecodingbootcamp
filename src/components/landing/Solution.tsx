@@ -29,10 +29,10 @@ export const Solution = () => {
           </SectionReveal>
 
           <SectionReveal delay={120}>
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-light aspect-square lg:aspect-[4/4]">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-brand-light ">
               <img
-                src="/images/illustrations/solution_aha.png"
-                alt="Developer having a breakthrough 'aha' moment"
+                src="https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778380944921-4wsmaf.webp"
+                alt="Stack of projects"
                 className="w-full h-full object-cover"
               />
             </div>

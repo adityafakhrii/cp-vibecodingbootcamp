@@ -41,11 +41,10 @@ export const Pricing = () => {
           {pricingSection.plans.map((plan, idx) => (
             <SectionReveal key={plan.name} delay={idx * 120}>
               <div
-                className={`relative rounded-3xl lg:rounded-[2rem] p-6 sm:p-8 md:p-10 transition-all duration-500 overflow-hidden h-full flex flex-col ${
-                  plan.recommended
+                className={`relative rounded-3xl lg:rounded-[2rem] p-6 sm:p-8 md:p-10 transition-all duration-500 overflow-hidden h-full flex flex-col ${plan.recommended
                     ? "bg-white dark:bg-white/[0.08] backdrop-blur-xl border-2 border-[#1FBBA6]/50 shadow-[0_8px_40px_rgba(31,187,166,0.12)] dark:shadow-[0_0_60px_rgba(31,187,166,0.15)]"
                     : "bg-white/80 dark:bg-white/[0.04] backdrop-blur-xl border border-border dark:border-white/10 shadow-sm"
-                }`}
+                  }`}
               >
                 {/* Recommended badge */}
                 {plan.recommended && (
@@ -57,11 +56,10 @@ export const Pricing = () => {
 
                 {/* Plan Header */}
                 <div className="mb-6">
-                  <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-4 ring-1 uppercase tracking-wide ${
-                    plan.recommended
+                  <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-4 ring-1 uppercase tracking-wide ${plan.recommended
                       ? "bg-[#1FBBA6]/10 text-[#1FBBA6] ring-[#1FBBA6]/30"
                       : "bg-secondary text-muted-foreground ring-border"
-                  }`}>
+                    }`}>
                     <Flame className="h-4 w-4" />
                     Paket {plan.name}
                   </div>
@@ -71,9 +69,8 @@ export const Pricing = () => {
 
                 {/* Price */}
                 <div className="flex flex-col sm:flex-row sm:items-end gap-3 mb-3">
-                  <span className={`text-4xl sm:text-5xl md:text-6xl font-black tracking-tight ${
-                    plan.recommended ? "text-[#1FBBA6]" : "text-foreground"
-                  }`}>
+                  <span className={`text-4xl sm:text-5xl md:text-6xl font-black tracking-tight ${plan.recommended ? "text-[#1FBBA6]" : "text-foreground"
+                    }`}>
                     {plan.price}
                   </span>
                 </div>
@@ -89,19 +86,16 @@ export const Pricing = () => {
                   {plan.includes.map((it) => {
                     const isBonus = it.startsWith("Bonus:");
                     return (
-                      <li key={it} className={`flex items-start gap-3 text-sm sm:text-base font-medium ${
-                        isBonus ? "text-[#F16767] dark:text-[#F16767]" : "text-foreground"
-                      }`}>
-                        <span className={`mt-0.5 h-5 w-5 rounded-full flex items-center justify-center shrink-0 ${
-                          isBonus
+                      <li key={it} className={`flex items-start gap-3 text-sm sm:text-base font-medium ${isBonus ? "text-[#F16767] dark:text-[#F16767]" : "text-foreground"
+                        }`}>
+                        <span className={`mt-0.5 h-5 w-5 rounded-full flex items-center justify-center shrink-0 ${isBonus
                             ? "bg-[#F16767]/15 border border-[#F16767]/25"
                             : plan.recommended
                               ? "bg-[#1FBBA6]/15 border border-[#1FBBA6]/25"
                               : "bg-brand-soft dark:bg-white/10 border border-brand-light/30 dark:border-white/10"
-                        }`}>
-                          <Check className={`h-3 w-3 ${
-                            isBonus ? "text-[#F16767]" : plan.recommended ? "text-[#1FBBA6]" : "text-brand-dark dark:text-brand-light"
-                          }`} strokeWidth={3} />
+                          }`}>
+                          <Check className={`h-3 w-3 ${isBonus ? "text-[#F16767]" : plan.recommended ? "text-[#1FBBA6]" : "text-brand-dark dark:text-brand-light"
+                            }`} strokeWidth={3} />
                         </span>
                         {isBonus ? (
                           <span>
@@ -131,9 +125,9 @@ export const Pricing = () => {
           ))}
         </div>
 
-        <p className="text-xs text-muted-foreground text-center mt-8 font-medium">
+        {/* <p className="text-xs text-muted-foreground text-center mt-8 font-medium">
           {pricingSection.footnote}
-        </p>
+        </p> */}
       </div>
     </section>
   );

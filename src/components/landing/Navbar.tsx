@@ -35,12 +35,12 @@ export const Navbar = () => {
 
   return (
     <header
-      className="fixed top-4 inset-x-0 z-50 transition-all duration-300 px-4"
+      className="fixed top-4 inset-x-0 z-50 transition-all duration-300 px-8"
     >
       <div className="container max-w-5xl mx-auto p-0">
         <nav
           className={cn(
-            "flex items-center justify-between px-5 py-3 transition-all duration-300 glass-nav",
+            "flex items-center justify-between px-6 py-2 transition-all duration-300 glass-nav",
             scrolled || open ? "shadow-md" : "shadow-sm border-transparent"
           )}
         >
@@ -52,14 +52,14 @@ export const Navbar = () => {
             <img
               src={LOGO_URL}
               alt="CODEPOLITAN"
-              className="h-10 w-30 rounded-lg object-contain"
+              className="h-8 w-auto rounded-lg object-contain"
             />
             {/* <span className="text-base md:text-lg">
               CODEPOLITAN <span className="text-brand-blue">Vibe Coding</span>
             </span> */}
           </a>
 
-          <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
             {navLinks.map((l) => (
               <a
                 key={l.href}
@@ -82,7 +82,7 @@ export const Navbar = () => {
               aria-label={open ? "Tutup menu" : "Buka menu"}
               aria-expanded={open}
               aria-controls="mobile-menu"
-              className="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-xl border border-border bg-surface text-foreground hover:bg-secondary transition-colors"
+              className="md:hidden inline-flex items-center justify-center h-9 w-9 rounded-lg border border-border bg-surface text-foreground hover:bg-secondary transition-colors"
             >
               {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
