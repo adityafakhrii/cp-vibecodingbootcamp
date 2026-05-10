@@ -1,5 +1,7 @@
 import { scheduleSection } from "@/data/content";
 import { SectionReveal } from "./SectionReveal";
+import { GradientButton } from "./GradientButton";
+import { ArrowRight, Zap } from "lucide-react";
 
 export const Schedule = () => {
     return (
@@ -13,6 +15,50 @@ export const Schedule = () => {
                     <p className="text-muted-foreground text-lg">
                         {scheduleSection.subtitle}
                     </p>
+                </SectionReveal>
+
+                {/* Batch Info Card */}
+                <SectionReveal className="max-w-3xl mx-auto mb-14">
+                    <div className="relative overflow-hidden rounded-2xl border-2 border-[#1FBBA6]/50 bg-gradient-to-r from-[#0f2027] to-[#162a3a] shadow-[0_0_40px_rgba(31,187,166,0.12)] p-6 sm:p-8">
+                        {/* Decorative glow */}
+                        <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#1FBBA6]/8 rounded-full blur-[100px] pointer-events-none" />
+
+                        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center gap-6">
+                            {/* Batch Number */}
+                            <div className="flex-shrink-0">
+                                <div className="text-4xl sm:text-5xl font-black text-white leading-none">
+                                    Batch {scheduleSection.batch.number}
+                                </div>
+                            </div>
+
+                            {/* Batch Details */}
+                            <div className="flex-1 space-y-2">
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                                    <div>
+                                        <p className="text-xs text-slate-400 font-medium">Kelas Dimulai:</p>
+                                        <p className="text-[#1FBBA6] font-bold text-lg">{scheduleSection.batch.startDate}</p>
+                                    </div>
+                                    <div className="hidden sm:block w-px h-8 bg-white/10" />
+                                    <div>
+                                        <p className="text-xs text-slate-400 font-medium">Jadwal:</p>
+                                        <p className="text-white font-semibold">{scheduleSection.batch.schedule}</p>
+                                    </div>
+                                </div>
+                                <p className="text-xs text-slate-400 mt-2">
+                                    {scheduleSection.batch.note}
+                                </p>
+                            </div>
+
+                            {/* Status Badge / CTA */}
+                            <div className="flex-shrink-0">
+                                <GradientButton asChildHref="#harga" size="md" className="whitespace-nowrap shadow-lg shadow-[#1FBBA6]/20">
+                                    <Zap className="h-4 w-4 mr-1.5" />
+                                    {scheduleSection.batch.status}
+                                    <ArrowRight className="ml-1.5 h-4 w-4" />
+                                </GradientButton>
+                            </div>
+                        </div>
+                    </div>
                 </SectionReveal>
 
                 <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20 lg:mb-24">

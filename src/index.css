@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    /* Light mode */
-    --background: 135 30% 98%;
-    /* #F6FBF7 */
+    /* Light mode — CODEPOLITAN palette */
+    --background: 170 30% 98%;
+    /* Slight teal tint */
     --foreground: 222 47% 11%;
     /* #0F172A */
 
@@ -18,8 +18,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 124 47% 48%;
-    /* #42B549 */
+    --primary: 170 85% 43%;
+    /* #1FBBA6 — Codepolitan Teal */
     --primary-foreground: 0 0% 100%;
     /* #FFFFFF */
 
@@ -33,9 +33,9 @@
     --muted-foreground: 215 20% 65%;
     /* #94a3b8 */
 
-    --accent: 124 47% 91%;
-    /* Light green accent */
-    --accent-foreground: 124 47% 48%;
+    --accent: 170 85% 91%;
+    /* Light teal accent */
+    --accent-foreground: 170 85% 43%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
@@ -43,26 +43,29 @@
     --border: 214 32% 91%;
     /* #E2E8F0 */
     --input: 214 32% 91%;
-    --ring: 124 47% 48%;
+    --ring: 170 85% 43%;
 
-    /* Brand Layering */
-    --brand-light: 124 47% 91%;
-    --brand-soft: 124 47% 96%;
-    --brand-blue: 124 47% 48%;
-    --brand-dark: 124 50% 35%;
-    --brand-deep: 124 50% 25%;
-    --brand-purple: 124 47% 48%;
+    /* Brand Layering — CODEPOLITAN */
+    --brand-light: 170 85% 91%;
+    --brand-soft: 170 85% 96%;
+    --brand-blue: 170 85% 43%;
+    /* #1FBBA6 Teal */
+    --brand-dark: 170 85% 32%;
+    --brand-deep: 170 85% 22%;
+    --brand-purple: 0 78% 68%;
+    /* #F16767 Magenta/Coral */
+    --brand-primary: 170 85% 43%;
 
     --radius: 1rem;
 
-    --sidebar-background: 135 30% 98%;
+    --sidebar-background: 170 30% 98%;
     --sidebar-foreground: 222 47% 11%;
-    --sidebar-primary: 124 47% 48%;
+    --sidebar-primary: 170 85% 43%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 215 16% 96%;
     --sidebar-accent-foreground: 222 47% 11%;
     --sidebar-border: 214 32% 91%;
-    --sidebar-ring: 124 47% 48%;
+    --sidebar-ring: 170 85% 43%;
   }
 
   .dark {
@@ -77,18 +80,19 @@
     --secondary-foreground: 215 20% 75%;
     --muted-foreground: 215 20% 65%;
 
-    /* Brand Layers */
-    --brand-light: 124 47% 48%;
+    /* Brand Layers — CODEPOLITAN Dark */
+    --brand-light: 170 85% 43%;
     --brand-soft: 215 39% 11%;
-    --brand-blue: 124 47% 48%;
-    --brand-dark: 124 47% 48%;
-    --brand-deep: 124 47% 48%;
-    --brand-purple: 124 47% 48%;
+    --brand-blue: 170 85% 50%;
+    --brand-dark: 170 85% 50%;
+    --brand-deep: 170 85% 50%;
+    --brand-purple: 0 78% 68%;
+    --brand-primary: 170 85% 50%;
 
     /* Components */
     --popover: 217 33% 17%;
     --popover-foreground: 210 40% 96%;
-    --primary: 124 47% 48%;
+    --primary: 170 85% 50%;
     --primary-foreground: 0 0% 100%;
     --muted: 215 39% 11%;
     --destructive: 0 63% 40%;
@@ -96,16 +100,16 @@
     /* Borders */
     --border: 215 28% 17%;
     --input: 215 28% 17%;
-    --ring: 124 47% 48%;
+    --ring: 170 85% 50%;
 
     --sidebar-background: 220 49% 8%;
     --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 124 47% 48%;
+    --sidebar-primary: 170 85% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 217 33% 17%;
     --sidebar-accent-foreground: 210 40% 96%;
     --sidebar-border: 215 28% 17%;
-    --sidebar-ring: 124 47% 48%;
+    --sidebar-ring: 170 85% 50%;
   }
 }
 
@@ -125,7 +129,7 @@
   }
 
   ::selection {
-    background: hsl(var(--brand-purple) / 0.35);
+    background: hsl(var(--brand-blue) / 0.35);
     color: hsl(var(--foreground));
   }
 }
@@ -154,14 +158,14 @@
   }
 
   .text-gradient-brand {
-    background: hsl(var(--brand-blue));
+    background: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-purple)));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .bg-gradient-brand {
-    background: hsl(var(--brand-blue));
+    background: linear-gradient(135deg, hsl(var(--brand-blue)), hsl(var(--brand-purple)));
   }
 
   .reveal {

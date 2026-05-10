@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { navLinks, navCTA } from "@/data/content";
 import { GradientButton } from "./GradientButton";
 import { ThemeToggle } from "./ThemeToggle";
-import { Sparkles, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+const LOGO_URL = "https://ltdwpaciulpophywcuam.supabase.co/storage/v1/object/public/shared-images/1778142629573-eetalh.webp";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -47,12 +49,14 @@ export const Navbar = () => {
             onClick={() => setOpen(false)}
             className="flex items-center gap-2 font-bold tracking-tight"
           >
-            <span className="h-8 w-8 rounded-lg bg-brand-blue flex items-center justify-center text-primary-foreground">
-              <Sparkles className="h-4 w-4" />
-            </span>
-            <span className="text-base md:text-lg">
-              RuangAI Vibe<span className="text-brand-blue">Coding</span>
-            </span>
+            <img
+              src={LOGO_URL}
+              alt="CODEPOLITAN"
+              className="h-10 w-30 rounded-lg object-contain"
+            />
+            {/* <span className="text-base md:text-lg">
+              CODEPOLITAN <span className="text-brand-blue">Vibe Coding</span>
+            </span> */}
           </a>
 
           <div className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
