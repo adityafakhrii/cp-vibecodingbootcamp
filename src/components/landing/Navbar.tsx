@@ -72,7 +72,8 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <ThemeToggle />
+            {/* Dark mode toggle — hidden for now, uncomment className to re-enable */}
+            <span className="hidden"><ThemeToggle /></span>
             <GradientButton asChildHref={navCTA.href} className="hidden sm:inline-flex">
               {navCTA.text}
             </GradientButton>
