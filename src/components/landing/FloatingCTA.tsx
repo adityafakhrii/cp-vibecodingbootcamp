@@ -20,7 +20,7 @@ export const FloatingCTA = () => {
         >
             <div className="bg-surface/90 backdrop-blur-md border border-border/80 shadow-2xl rounded-2xl p-1.5 flex items-center gap-2 ring-1 ring-brand-blue/10">
                 <GradientButton asChildHref={navCTA.href} size="md" className="w-full text-xs sm:text-sm px-3 py-2 shadow-lg shadow-brand-blue/20">
-                    Amankan Slot
+                    Amankan Kuota
                 </GradientButton>
             </div>
         </div>

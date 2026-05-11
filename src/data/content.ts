@@ -560,7 +560,7 @@ export const finalCTA = {
     title: "Yang mulai duluan, ",
     titleHighlight: "menang duluan.",
     subtitle: "Batch 1 dimulai 04 Mei. Kalau kamu masih menunggu, orang lain sudah launch duluan.",
-    ctaText: "Amankan Slot Sekarang",
+    ctaText: "Amankan Kuota Sekarang",
     ctaHref: "https://codepolitan.com",
 };
 
