@@ -16,7 +16,7 @@ export const FinalCTA = () => {
         <SectionReveal className="max-w-3xl mx-auto text-center flex flex-col items-center">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface border border-border shadow-sm text-xs font-semibold uppercase tracking-widest text-brand-blue mb-8">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue animate-pulse" />
-            Batch 1 — Slot Terbatas
+            Batch 1 — Kuota Terbatas
           </span>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-foreground">

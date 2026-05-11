@@ -32,7 +32,7 @@ import {
 
 // ── Hero ─────────────────────────────────────────────
 export const hero = {
-    badge: "Batch 1 dimulai 04 Mei — slot terbatas",
+    badge: "Batch 1 dimulai 04 Mei — kuota terbatas",
     subtitle: "Punya Ide?",
     titleLine1: "Bangun Aplikasi Sendiri",
     titleHighlight: "Tanpa Harus Jadi Programmer.",
@@ -473,7 +473,7 @@ export const pricingSection = {
     label: "HARGA",
     title: "Berapa harga untuk bisa build aplikasi sendiri?",
     subtitle: "Promo khusus batch pertama — jangan sampai tertinggal.",
-    urgencyNote: "Slot terbatas",
+    urgencyNote: "Kuota terbatas",
     urgencyDetail: "— harga akan naik setelah batch ini terisi penuh.",
     footnote: "Pembayaran sekali. Akses selamanya.",
     plans: [
